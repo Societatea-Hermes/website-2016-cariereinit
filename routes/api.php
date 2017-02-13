@@ -31,8 +31,10 @@ Route::get('/getUsers', 'UserController@getUsers');
 Route::post('/addEditEvent', 'EventController@addEditEvent');
 Route::get('/getEvents', 'EventController@getEvents');
 Route::get('/getEventById', 'EventController@getEventById');
+Route::get('/getEventRegistrations', 'EventController@getEventRegistrations');
 
 Route::post('/addEditOffer', 'OfferController@addEditOffer');
 Route::get('/getOffers', 'OfferController@getOffers');
+Route::get('/getOfferById', 'OfferController@getOfferById');
 Route::get('/getOfferApplications', 'OfferController@getOfferApplications');
 Route::get('/downloadApplication/{id_application}', 'OfferController@downloadApplication');

@@ -9,6 +9,7 @@ use App\Http\Requests\AdminRequest;
 use App\Http\Requests\LoggedInRequest;
 
 use App\Models\Event;
+use App\Models\EventRegistration;
 
 use Input;
 
@@ -117,6 +118,50 @@ class EventController extends Controller
 
     	$toReturn['success'] = 1;
 		return $this->returnResponseJson($ev);
+    }
+
+    public function getEventRegistrations(AdminRequest $req, EventRegistration $evReq) {
+        $search = array(
+            'event_id'            =>  Input::get('event_id'),
+            'sidx'          =>  Input::get('sidx'),
+            'sord'          =>  Input::get('sord'),
+            'limit'         =>  empty(Input::get('rows')) ? 10 : Input::get('rows'),
+            'page'          =>  empty(Input::get('page')) ? 1 : Input::get('page')
+        );
+
+        $registrations = $evReq->getFiltered($search);
+
+        $registrationsCount = $evReq->getFiltered($search, true);
+        if($registrationsCount == 0) {
+            $numPages = 0;
+        } else {
+            if($registrationsCount % $search['limit'] > 0) {
+                $numPages = ($registrationsCount - ($registrationsCount % $search['limit'])) / $search['limit'] + 1;
+            } else {
+                $numPages = $registrationsCount / $search['limit'];
+            }
+        }
+
+        $toReturn = array(
+            'rows'      =>  array(),
+            'records'   =>  $registrationsCount,
+            'page'      =>  $search['page'],
+            'total'     =>  $numPages
+        );
+
+        $isGrid = Input::get('is_grid', false); // Checking if the caller is jqGrid -> if yes, we add actions to the response..
+
+        foreach($registrations as $register) {
+            $toReturn['rows'][] = array(
+                'id'    =>  $register->id,
+                'cell'  =>  array(
+                    $register->full_name,
+                    $register->email
+                )
+            );
+        }
+
+        return $this->returnResponseJson($toReturn);
     }
 
     public function deRegisterFromEvent(UserRequest $req, EventRegistration $evReg, Event $ev) {

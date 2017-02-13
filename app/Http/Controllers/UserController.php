@@ -72,7 +72,9 @@ class UserController extends Controller
 
     	$userData = $userExists->toArray();
     	$userData['token'] = $loginKey;
-    	Session::put('userData');
+    	Session::put('userData', $userData);
+
+        // $userDataX = Session::get('userData');
 
     	$toReturn = array(
 			'success'	=>	1,
@@ -235,7 +237,11 @@ class UserController extends Controller
             $actions = $userX->id;
 
             if($isGrid != false) {
-                // $actions = "<button class='btn btn-default btn-xs' title='Edit' onclick='edit(".$userX->id.")'><i class='fa fa-pencil'></i></button>";
+                $actions = "";
+                if($userX->privilege != 1) {
+
+                    $actions .= "<button class='btn btn-default btn-xs' title='Reset password' onclick='resetPassword(".$userX->id.")'><i class='fa fa-pencil'></i></button>";
+                }
             }
 
             $toReturn['rows'][] = array(

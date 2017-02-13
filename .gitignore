@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /.idea
+/resources/assets/bower_components
 Homestead.json
 Homestead.yaml
 .env

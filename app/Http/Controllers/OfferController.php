@@ -38,13 +38,20 @@ class OfferController extends Controller
     }
 
     public function getOffers(LoggedInRequest $req, Offer $offer) {
-    	$search = array(
+        $userData = $req->userData;
+        $search = array(
     		'partner_id'	=>	Input::get('partner_id'),
             'sidx'          =>  Input::get('sidx'),
             'sord'          =>  Input::get('sord'),
             'limit'         =>  empty(Input::get('rows')) ? 10 : Input::get('rows'),
             'page'          =>  empty(Input::get('page')) ? 1 : Input::get('page')
         );
+
+        $isGrid = Input::get('is_grid', false); // Checking if the caller is jqGrid..
+        
+        if($userData['privilege'] == 2) { // Can only see his own offers
+            $search['partner_id'] = $userData['id'];
+        }
 
         $offers = $offer->getFiltered($search);
 
@@ -66,8 +73,6 @@ class OfferController extends Controller
             'total'     =>  $numPages
         );
 
-        $isGrid = Input::get('is_grid', false); // Checking if the caller is jqGrid -> if yes, we add actions to the response..
-
         foreach($offers as $offerX) {
             $actions = $offerX->id;
 
@@ -87,6 +92,14 @@ class OfferController extends Controller
         }
 
         return $this->returnResponseJson($toReturn);
+    }
+
+    public function getOfferById(PartnerRequest $req, Offer $offer) {
+        $userData = $req->userData;
+        
+        $id = Input::get('id');
+        $offer = $offer->where('id', $id)->where('partner_id', $userData['id'])->firstOrFail();
+        return $this->returnResponseJson($offer);
     }
 
     public function applyForOffer(UserRequest $req, Offer $offer) {
