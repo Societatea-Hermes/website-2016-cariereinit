@@ -21,10 +21,18 @@ class RootSeeder extends Seeder {
 	public function run() {
 		User::create([
 			'username'	=>	'glitch',
-			'password'	=>	Hash::make('1234'),
+			'password'	=>	Hash::make('secretPassword1234'),
 			'full_name'	=>	'Flaviu Porutiu',
 			'privilege'	=>	3,
 			'email'		=>	'flaviu@societatea-hermes.ro'
+		]);
+
+		User::create([
+			'username'	=>	'herman',
+			'password'	=>	Hash::make('password1234'),
+			'full_name'	=>	'Cariere Admin',
+			'privilege'	=>	3,
+			'email'		=>	'contact@cariereinit.ro'
 		]);
 	}
 }
