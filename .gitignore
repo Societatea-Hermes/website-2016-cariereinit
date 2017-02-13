@@ -2,6 +2,8 @@
 /public/storage
 /public/hot
 /storage/*.key
+/storage/partners
+/storage/applications
 /vendor
 /.idea
 /resources/assets/bower_components
