@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 
 /* All users */
 Route::post('/login', 'UserController@login');
+Route::any('/facebookLogin', 'UserController@facebookLogin');
+Route::any('/oAuthRedirect', 'UserController@oAuthRedirect');
 
 /* Admin Routes */
 Route::post('/addEditPackage', 'PackageController@addEditPackage');
@@ -32,9 +34,11 @@ Route::post('/addEditEvent', 'EventController@addEditEvent');
 Route::get('/getEvents', 'EventController@getEvents');
 Route::get('/getEventById', 'EventController@getEventById');
 Route::get('/getEventRegistrations', 'EventController@getEventRegistrations');
+Route::post('/registerForEvent', 'EventController@registerForEvent');
 
 Route::post('/addEditOffer', 'OfferController@addEditOffer');
 Route::get('/getOffers', 'OfferController@getOffers');
 Route::get('/getOfferById', 'OfferController@getOfferById');
 Route::get('/getOfferApplications', 'OfferController@getOfferApplications');
+Route::post('/applyForOffer', 'OfferController@applyForOffer');
 Route::get('/downloadApplication/{id_application}', 'OfferController@downloadApplication');

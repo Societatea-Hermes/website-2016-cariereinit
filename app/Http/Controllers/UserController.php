@@ -25,6 +25,7 @@ use Hash;
 use Input;
 use Response;
 use Session;
+use Socialite;
 use Uuid;
 
 class UserController extends Controller
@@ -258,5 +259,42 @@ class UserController extends Controller
         }
 
         return $this->returnResponseJson($toReturn);
+    }
+
+    public function facebookLogin() {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function oAuthRedirect(User $user, Auth $auth, Request $req) {
+        $fbUser = Socialite::driver('facebook')->user();
+
+        $user = $user->where('username', $fbUser->id)->first();
+        if($user == null) {
+            $user = new User();
+            $user->username = $fbUser->id;
+            $user->email = $fbUser->email;
+            $user->full_name = $fbUser->name;
+            $user->privilege = 1;
+            $user->save();
+        }
+
+        $auth->ip = $req->ip();
+        $auth->user_agent = $req->header('User-Agent');
+        $rawRequestParams = http_build_query($req->all());
+        $auth->raw_request_params = $rawRequestParams;
+
+        $auth->user_id = $user->id;
+
+        $loginKey = Uuid::generate(1);
+        $loginKey = $loginKey->string;
+
+        $auth->token_generated = $loginKey;
+        $auth->save();
+
+        $userData = $user->toArray();
+        $userData['token'] = $loginKey;
+        Session::put('userData', $userData);
+
+        return redirect('/');
     }
 }

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class EventRegistration extends Model
 {
+    protected $fillable = ['user_id', 'event_id'];
+
     public function getFiltered($search = array(), $onlyTotal = false) {
         $obj = $this->select('users.*')
         			->join('users', 'users.id', '=', 'event_registrations.user_id');

@@ -98,6 +98,7 @@ function addOfferRegistrationSubgrid(subgridDivID, rowID) {
         shrinkToFit: true,
         postData: {
             id: rowID,
+            is_grid: true,
             rows: 10000,
         },
         colNames: [
@@ -178,4 +179,8 @@ function closeAndClear() {
 	currentOffer = 0;
 	$('#title').val("");
 	$('#description').val("");
+}
+
+function download(id) {
+    window.open("/api/downloadApplication/"+id);
 }

@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('frontend');
+// });
+
+Route::get('/', 'FrontendController@renderFrontend')->name('frontend');
 
 Route::middleware('logged_in')->get('/backoffice/login', 'BackofficeController@login')->name('login');
 

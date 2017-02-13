@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\AddEditEventRequest;
 use App\Http\Requests\AdminRequest;
 use App\Http\Requests\LoggedInRequest;
+use App\Http\Requests\UserRequest;
 
 use App\Models\Event;
 use App\Models\EventRegistration;
@@ -106,7 +107,7 @@ class EventController extends Controller
 	    	$alreadyRegisteredPeople = $evReg->where('event_id', $ev->id)->count();
 	    	if($alreadyRegisteredPeople >= $ev->max_participants) {
 	    		$toReturn['success'] = 0;
-	    		$toReturn['message'] = "All places were occupied!";
+	    		$toReturn['message'] = "Toate locurile au fost ocupate!";
 	    		return $this->returnResponseJson($ev);
 	    	}
     	}
@@ -117,7 +118,7 @@ class EventController extends Controller
     	]);
 
     	$toReturn['success'] = 1;
-		return $this->returnResponseJson($ev);
+		return $this->returnResponseJson($toReturn);
     }
 
     public function getEventRegistrations(AdminRequest $req, EventRegistration $evReq) {

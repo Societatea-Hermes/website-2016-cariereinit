@@ -12,7 +12,9 @@ use App\Http\Requests\UserRequest;
 use App\Models\Offer;
 use App\Models\OfferApplication;
 
+use File;
 use Input;
+use Response;
 
 class OfferController extends Controller
 {
@@ -139,6 +141,7 @@ class OfferController extends Controller
         	$hasAlreadyApplied->offer_id = $offer->id;
         }
 
+        $file->move($copyDirectory, $filename);
         $hasAlreadyApplied->file_path = $filename;
         $hasAlreadyApplied->save();
 
@@ -153,7 +156,7 @@ class OfferController extends Controller
     	$offer = $offer->where('id', $offer_id)->where('partner_id', $userData['id'])->firstOrFail();
 
     	$search = array(
-    		'offer_id'		=>	Input::get('offer_id'),
+    		'offer_id'		=>	$offer_id,
             'sidx'          =>  Input::get('sidx'),
             'sord'          =>  Input::get('sord'),
             'limit'         =>  empty(Input::get('rows')) ? 10 : Input::get('rows'),
@@ -186,11 +189,11 @@ class OfferController extends Controller
             $actions = $offerX->id;
 
             if($isGrid != false) {
-                $actions = "<button class='btn btn-default btn-xs' title='Download application' onclick='download(".$offerX->id.")'><i class='fa fa-pencil'></i></button>";
+                $actions = "<button class='btn btn-default btn-xs' title='Download application' onclick='download(".$offerX->id.")'><i class='fa fa-download'></i></button>";
             }
 
             $toReturn['rows'][] = array(
-                'id'    =>  $event->id,
+                'id'    =>  $offerX->id,
                 'cell'  =>  array(
                     $actions,
                     $offerX->full_name,
