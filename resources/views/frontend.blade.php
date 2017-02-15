@@ -84,7 +84,7 @@
 		============================================= -->
 		<section id="slider" class="slider-parallax full-screen">
 			<div class="slider-parallax-inner">
-				<div class="full-screen dark section nopadding nomargin noborder ohidden" style="background-image: url('images/page/4.jpg'); background-size: cover; background-position: center center;">
+				<div class="full-screen dark section nopadding nomargin noborder ohidden" style="background-image: url('images/landing.png'); background-size: cover; background-position: center center;">
 					<div class="row nomargin" style="position: relative; z-index: 2;">
 						<div class="col-md-offset-7 col-md-5 full-screen" style="background-color: rgba(0,0,0,0.45);">
 							<div class="vertical-middle col-padding">
