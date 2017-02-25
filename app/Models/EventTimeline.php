@@ -4,15 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class EventTimeline extends Model
 {
     // protected $dates = ['created_at', 'updated_at', 'date_start', 'date_end'];
-    
+
     public function getFiltered($search = array(), $onlyTotal = false) {
         $obj = $this;
 
         // Filters here..
-
+        if(isset($search['event_id']) && !empty($search['event_id'])) {
+        	$obj = $obj->where('event_id', $search['event_id']);
+        }
         // END filters..
 
         if($onlyTotal) {
@@ -26,12 +28,11 @@ class Event extends Model
                 case 'name':
                 case 'date_start':
                 case 'date_end':
-                case 'max_participants':
                     $obj = $obj->orderBy($search['sidx'], $search['sord']);
                     break;
 
                 default:
-                    $obj = $obj->orderBy('name', $search['sord']);
+                    $obj = $obj->orderBy('date_start', $search['sord']);
                     break;
             }
         }

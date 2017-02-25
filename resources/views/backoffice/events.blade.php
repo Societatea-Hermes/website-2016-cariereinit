@@ -53,6 +53,39 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="modal fade" id="addEditEventTimeline" tabindex="-1" role="dialog" aria-labelledby="eventModal">
+		<div class="modal-dialog smallModal" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="eventModal">Add / edit event timeline</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="timeline_name">Name</label>
+						<input type="text" name="timeline_name" id="timeline_name" class="form-control" required />
+					</div>
+					<div class="form-group">
+						<label for="timeline_description">Description</label>
+						<input type="text" name="timeline_description" id="timeline_description" class="form-control" required />
+					</div>
+					<div class="form-group">
+						<label for="timeline_date_start">Date start</label>
+						<input type="text" name="timeline_date_start" id="timeline_date_start" class="form-control" required />
+					</div>
+					<div class="form-group">
+						<label for="timeline_date_end">Date end</label>
+						<input type="text" name="timeline_date_end" id="timeline_date_end" class="form-control" required />
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button onclick="closeAndClearEventTimeline()" class="btn btn-default">Close</button>
+					<button onclick="saveEventTimeline()" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
 @stop
 
 @section('extraJs')

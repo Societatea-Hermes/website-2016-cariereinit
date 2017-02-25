@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="/template/css/fonts.css" type="text/css" />
 
 	<link rel="stylesheet" href="/template/css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="/css/style.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
@@ -366,6 +367,13 @@
 				<div class="modal-body">
 					<h1 id="eventName"></h1>
 					<p id="eventDescription"></p>
+					<hr />
+					<h2>Timeline-ul evenimentului</h2>
+					<div id="timeline">
+						<section id="cd-timeline" class="cd-container">
+							
+						</section>
+					</div>
 					<button class="btn btn-success" onclick="signup()">Inscrie-te pentru eveniment</button>
 				</div>
 				<div class="modal-footer">

@@ -35,6 +35,11 @@ Route::get('/getEvents', 'EventController@getEvents');
 Route::get('/getEventById', 'EventController@getEventById');
 Route::get('/getEventRegistrations', 'EventController@getEventRegistrations');
 Route::post('/registerForEvent', 'EventController@registerForEvent');
+Route::post('/addEditEventTimeline', 'EventController@addEditEventTimeline');
+Route::get('/getEventTimelineById', 'EventController@getEventTimelineById');
+Route::post('/deleteEventTimeline', 'EventController@deleteEventTimeline');
+Route::get('/getEventTimelines', 'EventController@getEventTimelines');
+
 
 Route::post('/addEditOffer', 'OfferController@addEditOffer');
 Route::get('/getOffers', 'OfferController@getOffers');

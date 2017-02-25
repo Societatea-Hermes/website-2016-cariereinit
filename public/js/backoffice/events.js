@@ -7,9 +7,10 @@ var grid_container = "#grid";
 var pager_container = "#gridPager";
 
 var currentEvent = 0;
+var currentTimeline = 0;
 
 function initDatePicker() {
-	$('#date_start, #date_end').datetimepicker({
+	$('#date_start, #date_end, #timeline_date_start, #timeline_date_end').datetimepicker({
 		format: 'YYYY-MM-DD HH:mm'
 	});
 }
@@ -89,12 +90,13 @@ function loadGrid() {
 }
 
 function onEventSubGridRowExpanded(subgridDivID, rowID) {
-	addEventRegistrationSubgrid(subgridDivID, rowID);
+    addEventRegistrationSubgrid(subgridDivID, rowID);
+    addEventTimelineSubgrid(subgridDivID, rowID);
 }
 
 function addEventRegistrationSubgrid(subgridDivID, rowID) {
 	var subgridTableID = subgridDivID + "_registrations";
-    jQuery("#" + subgridDivID).html('');
+    // jQuery("#" + subgridDivID).html('');
     jQuery("#" + subgridDivID).attr('style', 'margin: 4px;');
     jQuery("#" + subgridDivID).append("<div class='row' style='margin-right: 0px'><div class='col-md-12'><center><table id='" + subgridTableID + "'></table></center></div></div>");
     jQuery("#" + subgridTableID).jqGrid({
@@ -131,6 +133,62 @@ function addEventRegistrationSubgrid(subgridDivID, rowID) {
     });
 }
 
+function addEventTimelineSubgrid(subgridDivID, rowID) {
+    var subgridTableID = subgridDivID + "_timelines";
+    // jQuery("#" + subgridDivID).html('');
+    jQuery("#" + subgridDivID).attr('style', 'margin: 4px;');
+    jQuery("#" + subgridDivID).append("<div class='row' style='margin-right: 0px'><div class='col-md-12'><center><table id='" + subgridTableID + "'></table></center></div></div>");
+    jQuery("#" + subgridTableID).jqGrid({
+        url: '/api/getEventTimelines',
+        caption: "Event timeline",
+        datatype: "json",
+        mtype: 'GET',
+        styleUI: 'Bootstrap',
+        autowidth: true,
+        height: 'auto',
+        rownumbers: true,
+        shrinkToFit: true,
+        postData: {
+            event_id: rowID,
+            is_grid: true,
+            rows: 10000,
+        },
+        colNames: [
+            'Actions',
+            'Name',
+            'Date start',
+            'Date end'
+        ],
+        colModel: [
+            {
+                name: 'actions',
+                index: 'actions',
+                sortable: false,
+                width: 60
+            }, {
+                name: 'name',
+                index: 'name',
+                align: 'center',
+                width: 200
+            }, {
+                name: 'date_start',
+                index: 'date_start',
+                align: 'center',
+                width: 100
+            }, {
+                name: 'date_end',
+                index: 'date_end',
+                align: 'center',
+                width: 100
+            }
+        ],
+        viewrecords: true,
+        rowNum: 10000,
+        sortname: 'date_start',
+        sortorder: 'ASC'
+    });
+}
+
 function edit(id) {
 	$.ajax({
 		url: '/api/getEventById',
@@ -140,12 +198,12 @@ function edit(id) {
 			id: id
 		},
 		success: function(response) {
-			currentEvent = response.id;
-			$('#name').val(response.name);
-			$('#description').val(response.description);
-			$('#date_start').val(response.date_start);
-			$('#date_end').val(response.date_end);
-			$('#max_participants').val(response.max_participants);
+			currentEvent = response.event.id;
+			$('#name').val(response.event.name);
+			$('#description').val(response.event.description);
+			$('#date_start').val(response.event.date_start);
+			$('#date_end').val(response.event.date_end);
+			$('#max_participants').val(response.event.max_participants);
 			$('#addEditEventModal').modal('show');
 		}
 	});
@@ -193,4 +251,87 @@ function closeAndClear() {
 	$('#date_start').val("");
 	$('#date_end').val("");
 	$('#max_participants').val("");
+}
+
+function addEventTimeline(eventId) {
+    currentEvent = eventId;
+    $('#addEditEventTimeline').modal('show');
+}
+
+function saveEventTimeline() {
+    $.ajax({
+        url: '/api/addEditEventTimeline',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {
+            timeline_id: currentTimeline,
+            id_event: currentEvent,
+            name: $('#timeline_name').val(),
+            description: $('#timeline_description').val(),
+            date_start: $('#timeline_date_start').val(),
+            date_end: $('#timeline_date_end').val()
+        },
+        success: function(response) {
+            if(response.success == 1) {
+                closeAndClearEventTimeline();
+                searchGrid();
+            } else {
+                alert("There was an error! Please try again!");
+            }
+        }
+    });
+}
+
+function closeAndClearEventTimeline() {
+    $('#addEditEventTimeline').modal('hide');
+
+    currentEvent = 0;
+    currentTimeline = 0;
+    $('#timeline_name').val(""),
+    $('#timeline_description').val("");
+    $('#timeline_date_start').val("");
+    $('#timeline_date_end').val("");
+}
+
+function editEventTimeline(timelineId) {
+    currentTimeline = timelineId;
+
+    $.ajax({
+        url: '/api/getEventTimelineById',
+        type: 'GET',
+        dataType: 'JSON',
+        data: {
+            id: timelineId
+        },
+        success: function(response) {
+            currentEvent = response.event_timeline.event_id;
+            $('#timeline_name').val(response.event_timeline.name);
+            $('#timeline_description').val(response.event_timeline.description);
+            $('#timeline_date_start').val(response.event_timeline.date_start);
+            $('#timeline_date_end').val(response.event_timeline.date_end);
+            $('#addEditEventTimeline').modal('show');
+        }
+    });
+}
+
+function deleteEventTimeline(timelineId) {
+    if(!confirm("Are you sure you want to delete this timeline item?")) {
+        return;
+    }
+
+    $.ajax({
+        url: '/api/deleteEventTimeline',
+        type: 'POST',
+        dataType: 'JSON',
+        data: {
+            id: timelineId
+        },
+        success: function(response) {
+            if(response.success == 1) {
+                searchGrid();
+            } else {
+                alert("There was an error! Please try again!");
+            }
+        }
+    });
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\User;
 
+use Carbon\Carbon;
 use Session;
 
 class FrontendController extends Controller
@@ -37,11 +38,13 @@ class FrontendController extends Controller
     	$events = Event::all();
     	$eventsArr = array();
     	foreach ($events as $event) {
+            $dateStart = Carbon::createFromFormat('Y-m-d H:i:s', $event->date_start);
+            $dateEnd = Carbon::createFromFormat('Y-m-d H:i:s', $event->date_end);
     		$eventsArr[] = array(
     			'id'	=>	$event->id,
     			'name'	=>	$event->name,
-    			'start'	=>	$event->date_start,
-    			'end'	=>	$event->date_end
+    			'start'	=>	$dateStart->format('d/m/Y H:i'),
+    			'end'	=>	$dateEnd->format('d/m/Y H:i')
     		);
     	}
 

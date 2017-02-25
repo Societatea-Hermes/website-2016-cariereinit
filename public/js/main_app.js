@@ -1,4 +1,14 @@
 var currentEvent = 0;
+
+var eventTimeline = '<div class="cd-timeline-block">\
+								<div class="cd-timeline-img cd-picture"></div>\
+								<div class="cd-timeline-content">\
+									<h2>{{title}}</h2>\
+									{{description}}\
+									<span class="cd-date">{{date}}</span>\
+								</div>\
+							</div>';
+
 function getEventData(id) {
 	$.ajax({
 		url: '/api/getEventById',
@@ -9,8 +19,20 @@ function getEventData(id) {
 		},
 		success: function(response) {
 			currentEvent = id;
-			$('#eventName').html(response.name);
-			$('#eventDescription').html(response.description);
+			$('#eventName').html(response.event.name);
+			$('#eventDescription').html(response.event.description);
+
+			var timeline = "";
+			$.each(response.timeline, function(key, value) {
+				var tmp = eventTimeline;
+				tmp = tmp.replace('{{title}}', value.name);
+				tmp = tmp.replace('{{description}}', value.description);
+				tmp = tmp.replace('{{date}}', value.date_start+" - "+value.date_end);
+				timeline += tmp;
+			});
+
+			$('#cd-timeline').html(timeline);
+
 			$('#eventData').modal('show');
 		}
 	});
