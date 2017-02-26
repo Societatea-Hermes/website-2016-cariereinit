@@ -53,8 +53,8 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="CariereInIt Logo"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="CariereInIt Logo"></a>
+						<a href="https://societatea-hermes.ro/" target="_blank" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Societatea Hermes Logo"></a>
+						<a href="https://societatea-hermes.ro/" target="_blank" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Societatea Hermes Logo"></a>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
