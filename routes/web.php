@@ -16,6 +16,7 @@
 // });
 
 Route::get('/', 'FrontendController@renderFrontend')->name('frontend');
+Route::any('/getOverlay', 'UserController@getOverlay');
 
 Route::middleware('logged_in')->get('/backoffice/login', 'BackofficeController@login')->name('login');
 

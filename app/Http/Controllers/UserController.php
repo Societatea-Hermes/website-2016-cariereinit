@@ -22,6 +22,7 @@ use App\Models\User;
 /* Libraries */
 use File;
 use Hash;
+use Image;
 use Input;
 use Response;
 use Session;
@@ -288,6 +289,9 @@ class UserController extends Controller
         $loginKey = Uuid::generate(1);
         $loginKey = $loginKey->string;
 
+        $auth->o_auth_token = $fbUser->token;
+        $auth->o_auth_refresh_token = $fbUser->refreshToken;
+
         $auth->token_generated = $loginKey;
         $auth->save();
 
@@ -295,6 +299,39 @@ class UserController extends Controller
         $userData['token'] = $loginKey;
         Session::put('userData', $userData);
 
+        $hasRedirect = Session::get('redirectToOverlay');
+        if($hasRedirect) {
+            Session::forget('redirectToOverlay');
+            return redirect()->action('UserController@getOverlay');
+        }
+
         return redirect('/');
+    }
+
+    public function getOverlay(User $user, Auth $auth) {
+        $userData = Session::get('userData');
+        if(empty($userData)) {
+            Session::put('redirectToOverlay', true);
+            // redirecting to oAuth..
+            return redirect()->action('UserController@facebookLogin');
+        }
+
+        $auth = $auth->where('token_generated', $userData['token'])->first();
+        $fbUser = Socialite::driver('facebook')->userFromToken($auth->o_auth_token);
+
+        $imgName = Uuid::generate('4');
+
+        $fbAvatar = $fbUser->avatar_original;
+        $fbAvatar = explode('?', $fbAvatar);
+        $fbAvatar = $fbAvatar[0]."?width=500&height=500";
+
+        $img = Image::make($fbAvatar)->resize(500, null, function($constraint) {
+                $constraint->aspectRatio();
+            })->insert('images/overlay.png', 'bottom-left')->save('images/overlays/'.$imgName.".jpg");
+
+        $addToView['imgSrc'] = $imgName;
+        
+        return view('facebookOverlay', $addToView);
+
     }
 }
