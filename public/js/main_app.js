@@ -69,7 +69,9 @@ var offerTemplate = '\
 		</div>\
 		<div id="{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">\
 			<div class="panel-body">\
-				{{description}}\
+				<div class="descriptionInside">\
+					{{description}}\
+				</div>\
 				<hr />\
 				<div class="form-group">\
 						<label for="avatar">Incarca-ti CV-ul</label>\
@@ -91,11 +93,14 @@ function getJobOffers(id) {
 		success: function(response) {
 			var offers = response.rows;
 			var toReplace = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+			var converter = new showdown.Converter();
 
 			$.each(offers, function(key, val) {
 				toReplace += offerTemplate;
 				toReplace = toReplace.replace("{{title}}", val.cell[1]);
-				toReplace = toReplace.replace("{{description}}", val.cell[2]);
+				var description = val.cell[2];
+				var descriptionFinal = converter.makeHtml(description);
+				toReplace = toReplace.replace("{{description}}", descriptionFinal);
 				toReplace = toReplace.replace(/{{id}}/g, val.cell[0]);
 			});
 

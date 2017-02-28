@@ -408,6 +408,7 @@
 	============================================= -->
 	<script type="text/javascript" src="/template/js/jquery.js"></script>
 	<script type="text/javascript" src="/template/js/plugins.js"></script>
+	<script type="text/javascript" src="/js/showdown.min.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->

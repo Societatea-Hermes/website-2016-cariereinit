@@ -400,3 +400,12 @@
     transform: translateX(0);
   }
 }
+
+/* Other stylings */
+.descriptionInside {
+  padding-left: 20px;
+}
+
+.descriptionTextArea {
+  min-height: 300px !important;
+}

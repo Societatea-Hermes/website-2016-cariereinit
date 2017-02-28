@@ -5,6 +5,9 @@ $(function() {
 var grid_container = "#grid";
 var pager_container = "#gridPager";
 
+var converter = new showdown.Converter();
+
+
 var currentOffer = 0;
 
 function loadGrid() {
@@ -183,4 +186,11 @@ function closeAndClear() {
 
 function download(id) {
     window.open("/api/downloadApplication/"+id);
+}
+
+function changePreview() {
+    var text = $('#description').val();
+    var textFinal = converter.makeHtml(text);
+
+    $('#offerPreview').html(textFinal);
 }
