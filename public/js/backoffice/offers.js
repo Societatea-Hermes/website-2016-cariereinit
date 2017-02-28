@@ -141,7 +141,8 @@ function edit(id) {
 			currentOffer = response.id;
 			$('#title').val(response.title);
 			$('#description').val(response.description);
-			$('#addEditOfferModal').modal('show');
+            changePreview();
+            $('#addEditOfferModal').modal('show');
 		}
 	});
 }
@@ -178,10 +179,10 @@ function save() {
 
 function closeAndClear() {
 	$('#addEditOfferModal').modal('hide');
-
-	currentOffer = 0;
-	$('#title').val("");
-	$('#description').val("");
+    currentOffer = 0;
+    $('#title').val("");
+    $('#description').val("");
+    changePreview();
 }
 
 function download(id) {
