@@ -11,6 +11,7 @@ use App\Http\Requests\UserRequest;
 
 use App\Models\Offer;
 use App\Models\OfferApplication;
+use App\Models\User;
 
 use File;
 use Input;
@@ -39,7 +40,7 @@ class OfferController extends Controller
 		return $this->returnResponseJson($toReturn);
     }
 
-    public function getOffers(LoggedInRequest $req, Offer $offer) {
+    public function getOffers(LoggedInRequest $req, Offer $offer, User $user) {
         $userData = $req->userData;
         $search = array(
     		'partner_id'	=>	Input::get('partner_id'),
@@ -68,8 +69,12 @@ class OfferController extends Controller
             }
         }
 
+        // Getting partner data..
+        $user = $user->findOrFail($search['partner_id']);
+
         $toReturn = array(
             'rows'      =>  array(),
+            'partner'   =>  $user->full_name,
             'records'   =>  $offersCount,
             'page'      =>  $search['page'],
             'total'     =>  $numPages

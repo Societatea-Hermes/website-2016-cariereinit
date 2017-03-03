@@ -93,6 +93,8 @@ function getJobOffers(id) {
 		success: function(response) {
 			var offers = response.rows;
 			var toReplace = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+			$('#companyName').html(response.partner);
+
 			var converter = new showdown.Converter();
 
 			$.each(offers, function(key, val) {
