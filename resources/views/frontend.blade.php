@@ -91,7 +91,7 @@
 							<div class="vertical-middle col-padding">
 								<div class="heading-block nobottomborder bottommargin-sm">
 									<h1 style="font-size: 22px;">CariereInIT</h1>
-									<span style="font-size: 16px;" class="t300 capitalize ls1 notopmargin">{{$is_logged ? "Salut, ".$userData['full_name']."! " : ""}}Let's visit your future</span>
+									<span style="font-size: 16px;" class="t300 capitalize ls1 notopmargin">{{$is_logged ? "Salut, ".$userData['full_name']."! " : ""}}</span>
 								</div>
 								@if(!$is_logged)
 									<div class="col_full nobottommargin">
@@ -121,7 +121,7 @@
 			<div class="content-wrap nopadding">
 				<div id="section-about" class="center page-section nobottompadding">
 					<div class="container clearfix">
-						<h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 40px;">Let’s visit your future</h2>
+						<h2 class="divcenter bottommargin font-body" style="max-width: 700px; font-size: 40px;">Empowering your career</h2>
 						<p class="lead divcenter bottommargin" style="max-width: 800px;">CariereInIT este un eveniment organizat de Societatea Hermes, care se adresează tuturor studenților și persoanelor pasionate de domeniul IT. <br />Scopul nostru este să aducem împreună angajatorii și potențialii angajați și să facilităm intrarea în mediul profesional a tinerilor programatori.</p>
 						<div class="clear"></div>
 					</div>
