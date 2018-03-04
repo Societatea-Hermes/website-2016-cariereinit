@@ -106,7 +106,7 @@
 										</a>
 									</div>
 								@endif
-								<p class="nobottommargin"><small class="t300"><em>înscrie-te la evenimente, încarcă-ți CV-ul și dă startul carierei tale în IT</em></small></p>
+								<p class="nobottommargin"><small class="t300"><em>Înscrie-te la evenimente, încarcă-ți CV-ul și dă startul carierei tale în IT!</em></small></p>
 							</div>
 							<a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="65" class="one-page-arrow dark"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 						</div>
@@ -310,9 +310,11 @@
 								<ul class="list-unstyled footer-site-links nobottommargin">
 									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
 									<li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>
-									<li><a href="#" data-scrollto="#section-events" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Events</a></li>
-									<li><a href="#" data-scrollto="#section-internships" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Internships &amp; Job offers</a></li>
-									<li><a href="#" data-scrollto="#section-feedback" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Feedback</a></li>
+									@if($is_logged)
+										<li><a href="#" data-scrollto="#section-events" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Events</a></li>
+										<li><a href="#" data-scrollto="#section-internships" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Internships &amp; Job offers</a></li>
+									@endif
+									{{-- <li><a href="#" data-scrollto="#section-feedback" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Feedback</a></li> --}}
 									<li><a href="#" data-scrollto="#footer" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Contact</a></li>
 								</ul>
 							</div>
