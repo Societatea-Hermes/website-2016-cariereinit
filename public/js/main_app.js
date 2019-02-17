@@ -8,7 +8,9 @@ var eventTimeline = '<div class="cd-timeline-block">\
 									<span class="cd-date">{{date}}</span>\
 								</div>\
 							</div>';
-
+function alertNotLoggedIn(){
+    alert("Creează-ți un cont.");
+}
 function getEventData(id) {
 	$.ajax({
 		url: '/api/getEventById',
