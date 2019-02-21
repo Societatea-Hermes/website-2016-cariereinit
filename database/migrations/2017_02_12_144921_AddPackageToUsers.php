@@ -14,7 +14,7 @@ class AddPackageToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('package_id')->nullable()->unsigned();
+            $table->integer('package_id')->nullable();
 
             $table->foreign('package_id')->references('id')->on('packages')->onDelete('cascade');
         });

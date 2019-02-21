@@ -14,9 +14,9 @@ class CreateEventRegistrationsTable extends Migration
     public function up()
     {
         Schema::create('event_registrations', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
-            $table->integer('user_id')->unsigned();
-            $table->integer('event_id')->unsigned();
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('event_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
