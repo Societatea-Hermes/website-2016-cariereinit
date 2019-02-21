@@ -14,12 +14,13 @@ class CreateEventTimelinesTable extends Migration
     public function up()
     {
         Schema::create('event_timelines', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('name');
             $table->text('description');
-            $table->integer('event_id');
-            $table->timestamp('date_start');
-            $table->timestamp('date_end');
+            $table->integer('event_id')->unsigned();
+            $table->dateTimeTz('date_end');
+            $table->dateTimeTz('date_start');
+
             $table->timestamps();
 
             $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');

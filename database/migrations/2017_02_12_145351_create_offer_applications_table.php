@@ -14,9 +14,9 @@ class CreateOfferApplicationsTable extends Migration
     public function up()
     {
         Schema::create('offer_applications', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('offer_id');
+            $table->increments('id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->integer('offer_id')->unsigned();
             $table->text('file_path');
             $table->timestamps();
 
