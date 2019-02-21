@@ -75,9 +75,19 @@
                         <li><a href="#" data-href="#section-events">
                                 <div>Events</div>
                             </a></li>
+                        <li><a href="#" data-href="#section-speakers">
+                                <div>Speakers</div>
+                            </a></li>
                         <li><a href="#" data-href="#section-internships">
                                 <div>Internships &amp; Job offers</div>
                             </a></li>
+
+
+                        {{--<li><a href="#" data-href="#section-testimoniale">--}}
+                                {{--<div>Testimoniale</div>--}}
+                            {{--</a></li>--}}
+
+
                         {{--@endif--}}
                         @if(false)
                             <li><a href="#" data-href="#section-feedback">
@@ -213,11 +223,84 @@
                 </div>
             </div>
 
+            <div id="section-speakers" class="page-section nopadding">
+                {{--title speakers--}}
+                <div class="section nomargin">
+                    <div class="container clearfix">
+                        <div class="divcenter center" style="max-width: 900px;">
+                            <h2 class="nobottommargin t300 ls1">Speakers</h2>
+                        </div>
+                    </div>
+                </div>
+                {{--end title speakers--}}
+
+
+                {{--speakers content--}}
+                <div class="content-wrap">
+                    <div class="container clearfix">
+
+                        {{--rows for each speaker--}}
+                        <div class="row">
+                            <div class="col-md-12 bottommargin">
+                                <div class="team team-list clearfix">
+                                    <div class="team-image">
+                                        <img src="/images/speakers/Bionote_Andrei_KELEMEN.jpg"
+                                             alt="Bionote Andrei KELEMEN">
+                                    </div>
+                                    <div class="team-desc">
+                                        <div class="team-title"><h4>Bionote Andrei KELEMEN</h4></div>
+                                        <div class="team-content">
+                                            <p class="textJustify">
+                                                De-a lungul carierei sale profesionale, Andrei a detinut functii de
+                                                conducere in
+                                                diverse organizatii private și publice, unde a condus numeroase proiecte
+                                                in
+                                                valoare de zeci de milioane de euro. Printre altele, a fost manager de
+                                                proiect
+                                                pentru Universitatea Babes-Bolyai, cea mai mare universitate publica din
+                                                tara cu
+                                                care colaboreaza si in acest moment. Inainte de aceasta, a coordonat
+                                                compartimentul de managementul informatiei intr-una din agentiile cu
+                                                atributii
+                                                de gestionare a fondurilor structurale UE din cadrul Ministerului
+                                                Muncii. Din
+                                                2013 este directorul executiv al Clusterului IT Cluj, prima si cea mai
+                                                importanta organizatie de acest tip din tara, unde supervizeaza toate
+                                                aspectele
+                                                operationale ale asociatiei care reprezinta interesele celei mai
+                                                dinamice
+                                                industrii din Cluj. Andrei contribuie, de asemenea, la definirea
+                                                strategiei și a
+                                                obiectivelor initiativei privind clusterul, alaturi de Consiliul
+                                                Director și
+                                                Adunarea Generala. Andrei este promotorul unor proiecte de schimbare
+                                                culturala
+                                                si organizationala cu impact asupra destinului industriei de IT din Cluj
+                                                si nu
+                                                numai. Andrei este licentiat si detine o diploma de master in
+                                                administratia
+                                                publica de la Universitatea Babeș-Bolyai din Cluj-Napoca, România.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{--end row for speaker--}}
+
+                    </div>
+                </div>
+                {{--end speakers content--}}
+            </div>
+             {{--end speakers section--}}
+
+            {{--begin intership section--}}
             <div id="section-internships" class="page-section nopadding">
                 <div class="section nomargin">
                     <div class="container clearfix">
                         <div class="divcenter center" style="max-width: 900px;">
                             <h2 class="nobottommargin t300 ls1">Internships &amp; Job offers</h2>
+
                         </div>
                     </div>
                 </div>
@@ -251,8 +334,24 @@
                 </div><!-- #portfolio end -->
             </div>
             {{--@endif--}}
+            {{--end intership section--}}
 
+            {{--begin testimonials section--}}
 
+            {{--<div id="section-testimoniale" class="page-section nopadding">--}}
+
+                {{--<div class="section nomargin">--}}
+                    {{--<div class="container clearfix">--}}
+                        {{--<div class="divcenter center" style="max-width: 900px;">--}}
+                            {{--<h2 class="nobottommargin t300 ls1">Testimoniale</h2>--}}
+                        {{--</div>--}}`
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+            {{--end testimonials section--}}
+
+            {{--feedback section --}}
             <div id="section-feedback" class="page-section">
                 @if(false)
                     <h2 class="center uppercase t300 ls3 font-body">Feedback</h2>
@@ -277,7 +376,8 @@
                                                         Program is Launching!</a></h3>
                                             </div>
                                             <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+                                                <a href="#" class="more-link">Read more <i
+                                                            class="icon-angle-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -294,11 +394,13 @@
                                             <span class="before-heading"
                                                   style="font-style: normal;">Inside Scoops</span>
                                             <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">The New YouTube
+                                                <h3 class="t400" style="font-size: 22px;"><a href="#">The New
+                                                        YouTube
                                                         Economy unfolds itself</a></h3>
                                             </div>
                                             <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+                                                <a href="#" class="more-link">Read more <i
+                                                            class="icon-angle-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -312,13 +414,16 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6" style="margin-top: 20px;">
-                                            <span class="before-heading" style="font-style: normal;">Video Blog</span>
+                                                <span class="before-heading"
+                                                      style="font-style: normal;">Video Blog</span>
                                             <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">Kicking Off Design
+                                                <h3 class="t400" style="font-size: 22px;"><a href="#">Kicking Off
+                                                        Design
                                                         Party in Style</a></h3>
                                             </div>
                                             <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+                                                <a href="#" class="more-link">Read more <i
+                                                            class="icon-angle-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -332,13 +437,15 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6" style="margin-top: 20px;">
-                                            <span class="before-heading" style="font-style: normal;">Inspiration</span>
+                                                <span class="before-heading"
+                                                      style="font-style: normal;">Inspiration</span>
                                             <div class="entry-title">
                                                 <h3 class="t400" style="font-size: 22px;"><a href="#">Top Ten Signs
                                                         You're a Designer</a></h3>
                                             </div>
                                             <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+                                                <a href="#" class="more-link">Read more <i
+                                                            class="icon-angle-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -351,7 +458,8 @@
                 @endif
 
                 <div class="container topmargin-lg clearfix">
-                    <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget" data-margin="80"
+                    <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget"
+                         data-margin="80"
                          data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2"
                          data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
                         @foreach($logos as $logo)
