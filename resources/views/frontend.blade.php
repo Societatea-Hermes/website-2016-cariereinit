@@ -84,8 +84,8 @@
 
 
                         {{--<li><a href="#" data-href="#section-testimoniale">--}}
-                                {{--<div>Testimoniale</div>--}}
-                            {{--</a></li>--}}
+                        {{--<div>Testimoniale</div>--}}
+                        {{--</a></li>--}}
 
 
                         {{--@endif--}}
@@ -248,38 +248,67 @@
                                              alt="Bionote Andrei KELEMEN">
                                     </div>
                                     <div class="team-desc">
-                                        <div class="team-title"><h4>Bionote Andrei KELEMEN</h4></div>
+                                        <div class="team-title"><h4>Bionote Andrei Kelemen - Director Executiv @ Cluj IT
+                                                Cluster</h4></div>
                                         <div class="team-content">
                                             <p class="textJustify">
-                                                De-a lungul carierei sale profesionale, Andrei a detinut functii de
-                                                conducere in
-                                                diverse organizatii private și publice, unde a condus numeroase proiecte
-                                                in
-                                                valoare de zeci de milioane de euro. Printre altele, a fost manager de
-                                                proiect
-                                                pentru Universitatea Babes-Bolyai, cea mai mare universitate publica din
-                                                tara cu
-                                                care colaboreaza si in acest moment. Inainte de aceasta, a coordonat
-                                                compartimentul de managementul informatiei intr-una din agentiile cu
-                                                atributii
-                                                de gestionare a fondurilor structurale UE din cadrul Ministerului
-                                                Muncii. Din
-                                                2013 este directorul executiv al Clusterului IT Cluj, prima si cea mai
-                                                importanta organizatie de acest tip din tara, unde supervizeaza toate
-                                                aspectele
-                                                operationale ale asociatiei care reprezinta interesele celei mai
-                                                dinamice
-                                                industrii din Cluj. Andrei contribuie, de asemenea, la definirea
-                                                strategiei și a
-                                                obiectivelor initiativei privind clusterul, alaturi de Consiliul
-                                                Director și
-                                                Adunarea Generala. Andrei este promotorul unor proiecte de schimbare
-                                                culturala
-                                                si organizationala cu impact asupra destinului industriei de IT din Cluj
-                                                si nu
-                                                numai. Andrei este licentiat si detine o diploma de master in
-                                                administratia
-                                                publica de la Universitatea Babeș-Bolyai din Cluj-Napoca, România.
+                                                De-a lungul carierei sale profesionale, Andrei a deținut funcții de
+                                                conducere în diverse organizații private și publice, unde a condus
+                                                numeroase proiecte în valoare de zeci de milioane de euro. Printre
+                                                altele, a fost manager de proiect pentru Universitatea Babeș-Bolyai, cea
+                                                mai mare universitate publică din țară cu care colaborează și în acest
+                                                moment. Înainte de aceasta, a coordonat compartimentul de managementul
+                                                informației într-una din agențiile cu atribuții de gestionare a
+                                                fondurilor structurale UE din cadrul Ministerului Muncii. Din 2013 este
+                                                directorul executiv al Clusterului IT Cluj, prima și cea mai importantă
+                                                organizație de acest tip din țară, unde supervizează toate aspectele
+                                                operaționale ale asociației care reprezintă interesele celei mai
+                                                dinamice industrii din Cluj. Andrei contribuie, de asemenea, la
+                                                definirea strategiei și a obiectivelor inițiativei privind clusterul,
+                                                alături de Consiliul Director și Adunarea Generală. Andrei este
+                                                promotorul unor proiecte de schimbare culturală și organizațională cu
+                                                impact asupra destinului industriei de IT din Cluj și nu numai. Este
+                                                licențiat și deține o diplomă de master în administrația publică de la
+                                                Universitatea Babeș-Bolyai din Cluj-Napoca, România.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{--end row for speaker--}}
+
+                        {{--rows for each speaker--}}
+                        <div class="row">
+                            <div class="col-md-12 bottommargin">
+                                <div class="team team-list clearfix">
+                                    <div class="team-image">
+                                        <img src="/images/speakers/Razvan_Voica.jpeg"
+                                             alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">
+                                    </div>
+                                    <div class="team-desc">
+                                        <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala Informală
+                                                de IT
+                                            </h4></div>
+                                        <div class="team-content">
+                                            <p class="textJustify">
+                                                Lider demn de încredere, abordând un mod ingenios de conducere, cu o
+                                                gândire creativă și deschisă, Răzvan are peste 17 ani de experiență în
+                                                industria IT, din care în mai mult de 10 a ocupat poziții de management
+                                                și antreprenoriat.
+
+                                                După sistemul său de valori, cultura reprezintă principalul factor în
+                                                întemeierea unei echipe, "cablul" vital, ce ne conectează și creează o
+                                                coordonare inimaginabilă.
+
+                                                Se spune că ar avea un al șaselea simț când vine vorba de descifrarea
+                                                personalităților și de înțelegerea oamenilor.
+
+                                                Așadar, strategiile sale și abilitatea de a se adapta ușor
+                                                oportunităților l-au motivat să contribuie la fondarea și dezvoltarea
+                                                celei mai mari platforme de educație alternativă din România: Școala
+                                                Informală de IT.
+
                                             </p>
                                         </div>
                                     </div>
@@ -292,7 +321,7 @@
                 </div>
                 {{--end speakers content--}}
             </div>
-             {{--end speakers section--}}
+            {{--end speakers section--}}
 
             {{--begin intership section--}}
             <div id="section-internships" class="page-section nopadding">
@@ -340,13 +369,13 @@
 
             {{--<div id="section-testimoniale" class="page-section nopadding">--}}
 
-                {{--<div class="section nomargin">--}}
-                    {{--<div class="container clearfix">--}}
-                        {{--<div class="divcenter center" style="max-width: 900px;">--}}
-                            {{--<h2 class="nobottommargin t300 ls1">Testimoniale</h2>--}}
-                        {{--</div>--}}`
-                    {{--</div>--}}
-                {{--</div>--}}
+            {{--<div class="section nomargin">--}}
+            {{--<div class="container clearfix">--}}
+            {{--<div class="divcenter center" style="max-width: 900px;">--}}
+            {{--<h2 class="nobottommargin t300 ls1">Testimoniale</h2>--}}
+            {{--</div>--}}`
+            {{--</div>--}}
+            {{--</div>--}}
             {{--</div>--}}
 
             {{--end testimonials section--}}
