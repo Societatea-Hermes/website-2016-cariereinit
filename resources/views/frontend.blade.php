@@ -248,7 +248,7 @@
                                              alt="Bionote Andrei KELEMEN">
                                     </div>
                                     <div class="team-desc">
-                                        <div class="team-title"><h4>Bionote Andrei Kelemen - Director Executiv @ Cluj IT
+                                        <div class="team-title"><h4>Andrei Kelemen - Director Executiv @ Cluj IT
                                                 Cluster</h4></div>
                                         <div class="team-content">
                                             <p class="textJustify">
