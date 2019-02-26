@@ -50,7 +50,8 @@ function signup() {
 		},
 		success: function(response) {
 			if(response.success == 1) {
-				alert("Inscriere realizata cu succes!");
+				alert("Inscriere realizata cu succes!" +
+					"Vei fi contactat pe mail pentru confirmare!");
 				currentEvent = 0;
 				$('#eventData').modal('hide');
 			} else {
