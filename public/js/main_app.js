@@ -49,8 +49,8 @@ function signup() {
 			id: currentEvent
 		},
 		success: function(response) {
-			if(response.success == 1) {
-				alert("Vei fi contactat pe mail pentru confirmare!");
+			if(response.success === 1) {
+				alert("Inscrierea a fost realizata cu succes!");
 				currentEvent = 0;
 				$('#eventData').modal('hide');
 			} else {
