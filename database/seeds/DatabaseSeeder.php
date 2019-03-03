@@ -19,20 +19,25 @@ class DatabaseSeeder extends Seeder
 
 class RootSeeder extends Seeder {
 	public function run() {
+//		User::create([
+//			'username'	=>	'glitch',
+//			'password'	=>	Hash::make('secretPassword1234'),
+//			'full_name'	=>	'Flaviu Porutiu',
+//			'privilege'	=>	3,
+//			'email'		=>	'flaviu@societatea-hermes.ro'
+//		]);
+//
 		User::create([
-			'username'	=>	'glitch',
-			'password'	=>	Hash::make('secretPassword1234'),
-			'full_name'	=>	'Flaviu Porutiu',
+			'username'	=>	'oana',
+			'password'	=>	Hash::make('oana'),
+			'full_name'	=>	'Oana Test Admin',
 			'privilege'	=>	3,
-			'email'		=>	'flaviu@societatea-hermes.ro'
+			'email'		=>	'contactsd@cariereinit.ro'
 		]);
 
-		User::create([
-			'username'	=>	'herman',
-			'password'	=>	Hash::make('password1234'),
-			'full_name'	=>	'Cariere Admin',
-			'privilege'	=>	3,
-			'email'		=>	'contact@cariereinit.ro'
-		]);
+
+
+
+
 	}
 }
