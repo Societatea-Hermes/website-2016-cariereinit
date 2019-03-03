@@ -494,7 +494,8 @@
                         @foreach($logos as $logo)
                             <div class="oc-item"><a href="{{$logo['url']}}"><img
                                             src="{{url('/api/getAvatar/'.$logo['img'])}}"
-                                            style="width: {{$logo['size']}}%" alt="{{$logo['name']}}"></a></div>
+                                            {{--style="width: {{$logo['size']}}%"--}}
+                                            alt="{{$logo['name']}}"></a></div>
                         @endforeach
                     </div>
                 </div>
