@@ -177,330 +177,364 @@
 
                 <div class="section nomargin">
                     <div class="container clearfix">
-                        <div class="divcenter center" style="max-width: 900px;">
-                            <h2 class="nobottommargin t300 ls1">Events</h2>
+                        <div class="divcenter center " style="max-width: 900px;">
+                            <h2 class="mb-10 t300 ls1 ">Events</h2>
+                        </div>
+                    </div>
+                    {{--columns sign up buttons--}}
+                    <div class="row divcenter center ">
+                        <div class="col-md-4 bottommargin">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1bitviTKSnrSortCqWs3nN1LaYuRZrUOvnP8wGarEnr-ogw/closedform"
+                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop CV</a>
+                        </div>
+                        <div class="col-md-4 bottommargin">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQ1u_FGzvWyKdbZYJMuT_6D6V85y-ao_tKx0Bi0VikCuQ5EA/closedform"
+                               target="_blank" class="btn btn-success button-circle">Înscriere - Turul
+                                Companiilor</a>
+                        </div>
+                        <div class="col-md-4 bottommargin">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdF2aDZL27lqMKLe0x1MovfPDDY27FtWlcVvO2LFrfWuQ6whg/closedform"
+                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop
+                                Interviu</a>
+                        </div>
+                    </div>
+
+                    {{--</div>--}}
+
+
+                    <div class="common-height clearfix">
+
+                        <div class="col-md-4 hidden-xs"
+                             style="background: url('../images/services/main-bg.jpg') center center no-repeat; background-size: cover;"></div>
+                        <div class="col-md-8">
+                            <div class="max-height">
+                                <div class="row common-height grid-border clearfix">
+                                    @foreach($events as $event)
+                                        @if($is_logged)
+                                            <div class="col-md-4 col-sm-6 col-padding cursorPointer"
+                                                 onclick="getEventData({{$event['id']}})">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain nobottomborder">
+                                                    {{-- 										<div class="fbox-icon">--}}
+                                                    {{--<a href="#" onclick="getEventData({{$event['id']}})"></a>--}}
+                                                    {{--</div> --}}
+                                                    <h3>{{$event['name']}}<br/>
+                                                        <small>{{$event['start']}} - {{$event['end']}}</small>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        @else
+                                            <div class="col-md-4 col-sm-6 col-padding cursorPointer"
+                                                 onclick="alertNotLoggedIn()">
+                                                <div class="feature-box fbox-center fbox-dark fbox-plain nobottomborder">
+                                                    {{-- 										<div class="fbox-icon">--}}
+                                                    {{--<a href="#" onclick="getEventData({{$event['id']}})"></a>--}}
+                                                    {{--</div> --}}
+                                                    <h3>{{$event['name']}}<br/>
+                                                        <small>{{$event['start']}} - {{$event['end']}}</small>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="common-height clearfix">
+                <div id="section-speakers" class="page-section nopadding">
+                    {{--title speakers--}}
+                    <div class="section nomargin">
+                        <div class="container clearfix">
+                            <div class="divcenter center" style="max-width: 900px;">
+                                <h2 class="nobottommargin t300 ls1">Speakers</h2>
+                            </div>
+                        </div>
+                    </div>
+                    {{--end title speakers--}}
 
-                    <div class="col-md-4 hidden-xs"
-                         style="background: url('../images/services/main-bg.jpg') center center no-repeat; background-size: cover;"></div>
-                    <div class="col-md-8">
-                        <div class="max-height">
-                            <div class="row common-height grid-border clearfix">
-                                @foreach($events as $event)
+
+                    {{--speakers content--}}
+                    <div class="content-wrap">
+                        <div class="container clearfix">
+
+                            {{--rows for each speaker--}}
+                            <div class="row">
+                                <div class="col-md-12 bottommargin">
+                                    <div class="team team-list clearfix">
+                                        <div class="team-image">
+                                            <img src="/images/speakers/Bionote_Andrei_KELEMEN.jpg"
+                                                 alt="Bionote Andrei KELEMEN">
+                                        </div>
+                                        <div class="team-desc">
+                                            <div class="team-title"><h4>Andrei Kelemen - Director Executiv @ Cluj IT
+                                                    Cluster</h4></div>
+                                            <div class="team-content">
+                                                <p class="textJustify">
+                                                    De-a lungul carierei sale profesionale, Andrei a deținut funcții de
+                                                    conducere în diverse organizații private și publice, unde a condus
+                                                    numeroase proiecte în valoare de zeci de milioane de euro. Printre
+                                                    altele, a fost manager de proiect pentru Universitatea Babeș-Bolyai,
+                                                    cea
+                                                    mai mare universitate publică din țară cu care colaborează și în
+                                                    acest
+                                                    moment. Înainte de aceasta, a coordonat compartimentul de
+                                                    managementul
+                                                    informației într-una din agențiile cu atribuții de gestionare a
+                                                    fondurilor structurale UE din cadrul Ministerului Muncii. Din 2013
+                                                    este
+                                                    directorul executiv al Clusterului IT Cluj, prima și cea mai
+                                                    importantă
+                                                    organizație de acest tip din țară, unde supervizează toate aspectele
+                                                    operaționale ale asociației care reprezintă interesele celei mai
+                                                    dinamice industrii din Cluj. Andrei contribuie, de asemenea, la
+                                                    definirea strategiei și a obiectivelor inițiativei privind
+                                                    clusterul,
+                                                    alături de Consiliul Director și Adunarea Generală. Andrei este
+                                                    promotorul unor proiecte de schimbare culturală și organizațională
+                                                    cu
+                                                    impact asupra destinului industriei de IT din Cluj și nu numai. Este
+                                                    licențiat și deține o diplomă de master în administrația publică de
+                                                    la
+                                                    Universitatea Babeș-Bolyai din Cluj-Napoca, România.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--end row for speaker--}}
+
+                            {{--rows for each speaker--}}
+                            <div class="row">
+                                <div class="col-md-12 bottommargin">
+                                    <div class="team team-list clearfix">
+                                        <div class="team-image">
+                                            <img src="/images/speakers/Razvan_Voica.jpeg"
+                                                 alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">
+                                        </div>
+                                        <div class="team-desc">
+                                            <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala
+                                                    Informală
+                                                    de IT
+                                                </h4></div>
+                                            <div class="team-content">
+                                                <p class="textJustify">
+                                                    Lider demn de încredere, abordând un mod ingenios de conducere, cu o
+                                                    gândire creativă și deschisă, Răzvan are peste 17 ani de experiență
+                                                    în
+                                                    industria IT, din care în mai mult de 10 a ocupat poziții de
+                                                    management
+                                                    și antreprenoriat.
+
+                                                    După sistemul său de valori, cultura reprezintă principalul factor
+                                                    în
+                                                    întemeierea unei echipe, "cablul" vital, ce ne conectează și creează
+                                                    o
+                                                    coordonare inimaginabilă.
+
+                                                    Se spune că ar avea un al șaselea simț când vine vorba de
+                                                    descifrarea
+                                                    personalităților și de înțelegerea oamenilor.
+
+                                                    Așadar, strategiile sale și abilitatea de a se adapta ușor
+                                                    oportunităților l-au motivat să contribuie la fondarea și
+                                                    dezvoltarea
+                                                    celei mai mari platforme de educație alternativă din România: Școala
+                                                    Informală de IT.
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--end row for speaker--}}
+
+                        </div>
+                    </div>
+                    {{--end speakers content--}}
+                </div>
+                {{--end speakers section--}}
+
+                {{--begin intership section--}}
+                <div id="section-internships" class="page-section nopadding">
+                    <div class="section nomargin">
+                        <div class="container clearfix">
+                            <div class="divcenter center" style="max-width: 900px;">
+                                <h2 class="nobottommargin t300 ls1">Internships &amp; Job offers</h2>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Items
+                    ============================================= -->
+                    <div id="portfolio"
+                         class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
+                        @foreach($logos as $logo)
+                            <article class="portfolio-item pf-uielements pf-media wide">
+                                <div class="portfolio-image">
                                     @if($is_logged)
-                                        <div class="col-md-4 col-sm-6 col-padding cursorPointer"
-                                             onclick="getEventData({{$event['id']}})">
-                                            <div class="feature-box fbox-center fbox-dark fbox-plain nobottomborder">
-                                                {{-- 										<div class="fbox-icon">--}}
-                                                {{--<a href="#" onclick="getEventData({{$event['id']}})"></a>--}}
-                                                {{--</div> --}}
-                                                <h3>{{$event['name']}}<br/>
-                                                    <small>{{$event['start']}} - {{$event['end']}}</small>
-                                                </h3>
+                                        <a href="#" onclick="getJobOffers({{$logo['img']}})">
+                                            <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}">
+                                        </a>
+                                        <div class="portfolio-overlay cursorPointer"
+                                             onclick="getJobOffers({{$logo['img']}})">
+                                            <div class="portfolio-desc">
+                                                <h3><a href="#">{{$logo['name']}}</a></h3>
                                             </div>
                                         </div>
                                     @else
-                                        <div class="col-md-4 col-sm-6 col-padding cursorPointer"
-                                             onclick="alertNotLoggedIn()">
-                                            <div class="feature-box fbox-center fbox-dark fbox-plain nobottomborder">
-                                                {{-- 										<div class="fbox-icon">--}}
-                                                {{--<a href="#" onclick="getEventData({{$event['id']}})"></a>--}}
-                                                {{--</div> --}}
-                                                <h3>{{$event['name']}}<br/>
-                                                    <small>{{$event['start']}} - {{$event['end']}}</small>
-                                                </h3>
-                                            </div>
-                                        </div>
+                                        <a href="#" onclick="alertNotLoggedIn()">
+                                            <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}">
+                                        </a>
                                     @endif
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div id="section-speakers" class="page-section nopadding">
-                {{--title speakers--}}
-                <div class="section nomargin">
-                    <div class="container clearfix">
-                        <div class="divcenter center" style="max-width: 900px;">
-                            <h2 class="nobottommargin t300 ls1">Speakers</h2>
-                        </div>
-                    </div>
-                </div>
-                {{--end title speakers--}}
-
-
-                {{--speakers content--}}
-                <div class="content-wrap">
-                    <div class="container clearfix">
-
-                        {{--rows for each speaker--}}
-                        <div class="row">
-                            <div class="col-md-12 bottommargin">
-                                <div class="team team-list clearfix">
-                                    <div class="team-image">
-                                        <img src="/images/speakers/Bionote_Andrei_KELEMEN.jpg"
-                                             alt="Bionote Andrei KELEMEN">
-                                    </div>
-                                    <div class="team-desc">
-                                        <div class="team-title"><h4>Andrei Kelemen - Director Executiv @ Cluj IT
-                                                Cluster</h4></div>
-                                        <div class="team-content">
-                                            <p class="textJustify">
-                                                De-a lungul carierei sale profesionale, Andrei a deținut funcții de
-                                                conducere în diverse organizații private și publice, unde a condus
-                                                numeroase proiecte în valoare de zeci de milioane de euro. Printre
-                                                altele, a fost manager de proiect pentru Universitatea Babeș-Bolyai, cea
-                                                mai mare universitate publică din țară cu care colaborează și în acest
-                                                moment. Înainte de aceasta, a coordonat compartimentul de managementul
-                                                informației într-una din agențiile cu atribuții de gestionare a
-                                                fondurilor structurale UE din cadrul Ministerului Muncii. Din 2013 este
-                                                directorul executiv al Clusterului IT Cluj, prima și cea mai importantă
-                                                organizație de acest tip din țară, unde supervizează toate aspectele
-                                                operaționale ale asociației care reprezintă interesele celei mai
-                                                dinamice industrii din Cluj. Andrei contribuie, de asemenea, la
-                                                definirea strategiei și a obiectivelor inițiativei privind clusterul,
-                                                alături de Consiliul Director și Adunarea Generală. Andrei este
-                                                promotorul unor proiecte de schimbare culturală și organizațională cu
-                                                impact asupra destinului industriei de IT din Cluj și nu numai. Este
-                                                licențiat și deține o diplomă de master în administrația publică de la
-                                                Universitatea Babeș-Bolyai din Cluj-Napoca, România.
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        {{--end row for speaker--}}
-
-                        {{--rows for each speaker--}}
-                        <div class="row">
-                            <div class="col-md-12 bottommargin">
-                                <div class="team team-list clearfix">
-                                    <div class="team-image">
-                                        <img src="/images/speakers/Razvan_Voica.jpeg"
-                                             alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">
-                                    </div>
-                                    <div class="team-desc">
-                                        <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala Informală
-                                                de IT
-                                            </h4></div>
-                                        <div class="team-content">
-                                            <p class="textJustify">
-                                                Lider demn de încredere, abordând un mod ingenios de conducere, cu o
-                                                gândire creativă și deschisă, Răzvan are peste 17 ani de experiență în
-                                                industria IT, din care în mai mult de 10 a ocupat poziții de management
-                                                și antreprenoriat.
-
-                                                După sistemul său de valori, cultura reprezintă principalul factor în
-                                                întemeierea unei echipe, "cablul" vital, ce ne conectează și creează o
-                                                coordonare inimaginabilă.
-
-                                                Se spune că ar avea un al șaselea simț când vine vorba de descifrarea
-                                                personalităților și de înțelegerea oamenilor.
-
-                                                Așadar, strategiile sale și abilitatea de a se adapta ușor
-                                                oportunităților l-au motivat să contribuie la fondarea și dezvoltarea
-                                                celei mai mari platforme de educație alternativă din România: Școala
-                                                Informală de IT.
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{--end row for speaker--}}
-
-                    </div>
+                            </article>
+                        @endforeach
+                    </div><!-- #portfolio end -->
                 </div>
-                {{--end speakers content--}}
-            </div>
-            {{--end speakers section--}}
+                {{--@endif--}}
+                {{--end intership section--}}
 
-            {{--begin intership section--}}
-            <div id="section-internships" class="page-section nopadding">
-                <div class="section nomargin">
-                    <div class="container clearfix">
-                        <div class="divcenter center" style="max-width: 900px;">
-                            <h2 class="nobottommargin t300 ls1">Internships &amp; Job offers</h2>
+                {{--begin testimonials section--}}
 
-                        </div>
-                    </div>
-                </div>
+                {{--<div id="section-testimoniale" class="page-section nopadding">--}}
 
-                <!-- Portfolio Items
-                ============================================= -->
-                <div id="portfolio"
-                     class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
-                    @foreach($logos as $logo)
-                        <article class="portfolio-item pf-uielements pf-media wide">
-                            <div class="portfolio-image">
-                                @if($is_logged)
-                                    <a href="#" onclick="getJobOffers({{$logo['img']}})">
-                                        <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}">
-                                    </a>
-                                    <div class="portfolio-overlay cursorPointer"
-                                         onclick="getJobOffers({{$logo['img']}})">
-                                        <div class="portfolio-desc">
-                                            <h3><a href="#">{{$logo['name']}}</a></h3>
-                                        </div>
-                                    </div>
-                                @else
-                                    <a href="#" onclick="alertNotLoggedIn()">
-                                        <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}">
-                                    </a>
-                                @endif
+                {{--<div class="section nomargin">--}}
+                {{--<div class="container clearfix">--}}
+                {{--<div class="divcenter center" style="max-width: 900px;">--}}
+                {{--<h2 class="nobottommargin t300 ls1">Testimoniale</h2>--}}
+                {{--</div>--}}`
+                {{--</div>--}}
+                {{--</div>--}}
+                {{--</div>--}}
 
-                            </div>
-                        </article>
-                    @endforeach
-                </div><!-- #portfolio end -->
-            </div>
-            {{--@endif--}}
-            {{--end intership section--}}
+                {{--end testimonials section--}}
 
-            {{--begin testimonials section--}}
+                {{--feedback section --}}
+                <div id="section-feedback" class="page-section">
+                    @if(false)
+                        <h2 class="center uppercase t300 ls3 font-body">Feedback</h2>
 
-            {{--<div id="section-testimoniale" class="page-section nopadding">--}}
+                        <div class="section nobottommargin">
+                            <div class="container clearfix">
 
-            {{--<div class="section nomargin">--}}
-            {{--<div class="container clearfix">--}}
-            {{--<div class="divcenter center" style="max-width: 900px;">--}}
-            {{--<h2 class="nobottommargin t300 ls1">Testimoniale</h2>--}}
-            {{--</div>--}}`
-            {{--</div>--}}
-            {{--</div>--}}
-            {{--</div>--}}
+                                <div class="row topmargin clearfix">
 
-            {{--end testimonials section--}}
-
-            {{--feedback section --}}
-            <div id="section-feedback" class="page-section">
-                @if(false)
-                    <h2 class="center uppercase t300 ls3 font-body">Feedback</h2>
-
-                    <div class="section nobottommargin">
-                        <div class="container clearfix">
-
-                            <div class="row topmargin clearfix">
-
-                                <div class="ipost col-sm-6 bottommargin clearfix">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="entry-image nobottommargin">
-                                                <a href="#"><img src="images/blog/1.jpg" alt="Paris"></a>
+                                    <div class="ipost col-sm-6 bottommargin clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="entry-image nobottommargin">
+                                                    <a href="#"><img src="images/blog/1.jpg" alt="Paris"></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <div class="col-md-6" style="margin-top: 20px;">
                                             <span class="before-heading"
                                                   style="font-style: normal;">Press &amp; Media</span>
-                                            <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">Global Meetup
-                                                        Program is Launching!</a></h3>
-                                            </div>
-                                            <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i
-                                                            class="icon-angle-right"></i></a>
+                                                <div class="entry-title">
+                                                    <h3 class="t400" style="font-size: 22px;"><a href="#">Global Meetup
+                                                            Program is Launching!</a></h3>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <a href="#" class="more-link">Read more <i
+                                                                class="icon-angle-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="ipost col-sm-6 bottommargin clearfix">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="entry-image nobottommargin">
-                                                <a href="#"><img src="images/blog/2.jpg" alt="Paris"></a>
+                                    <div class="ipost col-sm-6 bottommargin clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="entry-image nobottommargin">
+                                                    <a href="#"><img src="images/blog/2.jpg" alt="Paris"></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <div class="col-md-6" style="margin-top: 20px;">
                                             <span class="before-heading"
                                                   style="font-style: normal;">Inside Scoops</span>
-                                            <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">The New
-                                                        YouTube
-                                                        Economy unfolds itself</a></h3>
-                                            </div>
-                                            <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i
-                                                            class="icon-angle-right"></i></a>
+                                                <div class="entry-title">
+                                                    <h3 class="t400" style="font-size: 22px;"><a href="#">The New
+                                                            YouTube
+                                                            Economy unfolds itself</a></h3>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <a href="#" class="more-link">Read more <i
+                                                                class="icon-angle-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="ipost col-sm-6 bottommargin clearfix">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="entry-image nobottommargin">
-                                                <a href="#"><img src="images/blog/3.jpg" alt="Paris"></a>
+                                    <div class="ipost col-sm-6 bottommargin clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="entry-image nobottommargin">
+                                                    <a href="#"><img src="images/blog/3.jpg" alt="Paris"></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <div class="col-md-6" style="margin-top: 20px;">
                                                 <span class="before-heading"
                                                       style="font-style: normal;">Video Blog</span>
-                                            <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">Kicking Off
-                                                        Design
-                                                        Party in Style</a></h3>
-                                            </div>
-                                            <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i
-                                                            class="icon-angle-right"></i></a>
+                                                <div class="entry-title">
+                                                    <h3 class="t400" style="font-size: 22px;"><a href="#">Kicking Off
+                                                            Design
+                                                            Party in Style</a></h3>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <a href="#" class="more-link">Read more <i
+                                                                class="icon-angle-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="ipost col-sm-6 bottommargin clearfix">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="entry-image nobottommargin">
-                                                <a href="#"><img src="images/blog/4.jpg" alt="Paris"></a>
+                                    <div class="ipost col-sm-6 bottommargin clearfix">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="entry-image nobottommargin">
+                                                    <a href="#"><img src="images/blog/4.jpg" alt="Paris"></a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6" style="margin-top: 20px;">
+                                            <div class="col-md-6" style="margin-top: 20px;">
                                                 <span class="before-heading"
                                                       style="font-style: normal;">Inspiration</span>
-                                            <div class="entry-title">
-                                                <h3 class="t400" style="font-size: 22px;"><a href="#">Top Ten Signs
-                                                        You're a Designer</a></h3>
-                                            </div>
-                                            <div class="entry-content">
-                                                <a href="#" class="more-link">Read more <i
-                                                            class="icon-angle-right"></i></a>
+                                                <div class="entry-title">
+                                                    <h3 class="t400" style="font-size: 22px;"><a href="#">Top Ten Signs
+                                                            You're a Designer</a></h3>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <a href="#" class="more-link">Read more <i
+                                                                class="icon-angle-right"></i></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
-
                         </div>
-                    </div>
-                @endif
+                    @endif
 
-                <div class="container topmargin-lg clearfix">
-                    <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget"
-                         data-margin="80"
-                         data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2"
-                         data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
-                        @foreach($logos as $logo)
-                            <div class="oc-item"><a href="{{$logo['url']}}"><img
-                                            src="{{url('/api/getAvatar/'.$logo['img'])}}"
-                                            {{--style="width: {{$logo['size']}}%"--}}
-                                            alt="{{$logo['name']}}"></a></div>
-                        @endforeach
+                    <div class="container topmargin-lg clearfix">
+                        <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget"
+                             data-margin="80"
+                             data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2"
+                             data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="6">
+                            @foreach($logos as $logo)
+                                <div class="oc-item"><a href="{{$logo['url']}}"><img
+                                                src="{{url('/api/getAvatar/'.$logo['img'])}}"
+                                                {{--style="width: {{$logo['size']}}%"--}}
+                                                alt="{{$logo['name']}}"></a></div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section><!-- #content end -->
 
     <!-- Footer
@@ -558,7 +592,7 @@
                                     <i class="icon-facebook"></i>
                                 </a>
                             </div>
-                            <p class="lead">Email: cariereinit@societatea-hermes.ro</p>
+                            <p class="lead">cariereinit@societatea-hermes.ro</p>
                         </div>
 
                     </div>
@@ -597,7 +631,7 @@
                     </section>
                 </div>
                 @if($is_logged)
-                    <button class="btn btn-success" onclick="signup()">Inscrie-te pentru eveniment</button>
+                    {{--<button class="btn btn-success" onclick="signup()">Inscrie-te pentru eveniment</button>--}}
                 @else
                     <p class="lead"> Creează-ți un cont pentru a te putea inscrie la eveniment</p>
                 @endif
