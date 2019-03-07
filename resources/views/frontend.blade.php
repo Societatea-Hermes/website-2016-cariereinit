@@ -310,13 +310,12 @@
                                 <div class="col-md-12 bottommargin">
                                     <div class="team team-list clearfix">
                                         <div class="team-image">
-                                            <img src="/images/speakers/Razvan_Voica.jpeg"
+                                            <img src="/images/speakers/Razvan_Voica_2.jpeg"
                                                  alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">
                                         </div>
                                         <div class="team-desc">
                                             <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala
-                                                    Informală
-                                                    de IT
+                                                    Informală de IT
                                                 </h4></div>
                                             <div class="team-content">
                                                 <p class="textJustify">
@@ -326,15 +325,13 @@
                                                     industria IT, din care în mai mult de 10 a ocupat poziții de
                                                     management
                                                     și antreprenoriat.
-
                                                     După sistemul său de valori, cultura reprezintă principalul factor
                                                     în
                                                     întemeierea unei echipe, "cablul" vital, ce ne conectează și creează
                                                     o
                                                     coordonare inimaginabilă.
 
-                                                    Se spune că ar avea un al șaselea simț când vine vorba de
-                                                    descifrarea
+                                                    Se spune că ar avea un al șaselea simț când vine vorba de descifrarea
                                                     personalităților și de înțelegerea oamenilor.
 
                                                     Așadar, strategiile sale și abilitatea de a se adapta ușor
