@@ -112,7 +112,7 @@
     <section id="slider" class="slider-parallax full-screen">
         <div class="slider-parallax-inner">
             <div class="full-screen dark section nopadding nomargin noborder ohidden"
-                 style="background-image: url('images/landing.jpg'); background-size: cover; background-position: center center;">
+                 style="background-image: url('/images/speakers/Site_Background.png'); background-size: cover; background-position: center center;">
                 <div class="row nomargin" style="position: relative; z-index: 2;">
                     <div class="col-md-offset-7 col-md-5 full-screen" style="background-color: rgba(0,0,0,0.45);">
                         <div class="vertical-middle col-padding">
@@ -351,9 +351,84 @@
                             </div>
                             {{--end row for speaker--}}
 
+                            {{--rows for each speaker--}}
+                            <div class="row">
+                                <div class="col-md-12 bottommargin">
+                                    <div class="team team-list clearfix">
+                                        <div class="team-image">
+                                            <img src="/images/speakers/Dan_Mircea_Suciu.jpg"
+                                                 alt="Bionote Andrei KELEMEN">
+                                        </div>
+                                        <div class="team-desc">
+                                            <div class="team-title"><h4>Dan Mircea Suciu - Lector @ Universitatea Babeș-Bolyai
+                                                </h4></div>
+                                            <div class="team-content">
+                                                <p class="textJustify">
+                                                    Lector la Facultatea de Matematică și Informatică a Universității Babeș-Bolyai, Cluj Napoca. Cadru didactic asociat la Școala Națională de Studii Politice și Administrative, București.
+                                                    Peste 20 de ani de experiență în dezvoltarea de produse software, din care mai bine de jumătate petrecute coordonând echipe internaționale de dimensiuni variate din rolul de leader tehnic, manager de proiect sau Scrum Master.
+                                                    Pasionat de jocuri video și filme de animație.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--end row for speaker--}}
+
+                            {{--rows for each speaker--}}
+                            <div class="row">
+                                <div class="col-md-12 bottommargin">
+                                    <div class="team team-list clearfix">
+                                        <div class="team-image">
+                                            <img src="/images/speakers/simona_motogna.jpg"
+                                                 alt="Bionote Andrei KELEMEN">
+                                        </div>
+                                        <div class="team-desc">
+                                            <div class="team-title"><h4>Simona Motogna - Conferențiar & Prodecan @
+                                                    Universitatea Babeș-Bolyai
+                                                </h4></div>
+                                            <div class="team-content">
+                                                <p class="textJustify">
+                                                    Simona Motogna este conferențiar și prodecan al Facultății de
+                                                    Matematică și informatică. Este implicată în activitatea de practică
+                                                    a studenților și în alte oportunități prin care studenții să își
+                                                    poată construi o carieră de succes. Pasionată de antreprenoriat,
+                                                    inovare, a obținut rezultate remarcabile în coordonarea studenților
+                                                    spre competiție.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--end row for speaker--}}
+
+                            {{--rows for each speaker--}}
+                            <div class="row">
+                                <div class="col-md-12 bottommargin">
+                                    <div class="team team-list clearfix">
+                                        <div class="team-image">
+                                            <img src="/images/speakers/Paul_Chirila_2.jpg"
+                                                 alt="Bionote Andrei KELEMEN">
+                                        </div>
+                                        <div class="team-desc">
+                                            <div class="team-title"><h4>Paul Chirilă - Fondator @ Around25
+                                                </h4></div>
+                                            <div class="team-content">
+                                                <p class="textJustify">
+                                                    Fost developer, actualmente antreprenor, mentor și tătic, Paul jonglează cu toate aceste roluri într-un mod jovial, destins și echilibrat. Aceste calități se reflectă în atmosfera din Around25, companie pe care o dezvoltă cu succes de 12 ani. Și pentru că munca de CEO nu e de ajuns, Paul e activ și în lumea startup-urilor, având în palmares 5 startup-uri: 3 pe piață, 2 eșuate.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{--end row for speaker--}}
+
                         </div>
                     </div>
                     {{--end speakers content--}}
+
                 </div>
                 {{--end speakers section--}}
 
@@ -535,6 +610,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section><!-- #content end -->
 
     <!-- Footer
