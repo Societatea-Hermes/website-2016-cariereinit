@@ -1,5 +1,10 @@
 var currentEvent = 0;
 
+
+function alertNotLoggedIn(){
+    alert("Intră în cont sau creează unul nou pentru a putea accesa toate informațiile.");
+}
+
 var eventTimeline = '<div class="cd-timeline-block">\
 								<div class="cd-timeline-img cd-picture"></div>\
 								<div class="cd-timeline-content">\
@@ -8,9 +13,8 @@ var eventTimeline = '<div class="cd-timeline-block">\
 									<span class="cd-date">{{date}}</span>\
 								</div>\
 							</div>';
-function alertNotLoggedIn(){
-    alert("Intră în cont sau creează unul nou pentru a putea accesa toate informațiile.");
-}
+
+
 function getEventData(id) {
 	$.ajax({
 		url: '/api/getEventById',
