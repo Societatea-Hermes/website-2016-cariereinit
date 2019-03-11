@@ -9,7 +9,7 @@ var eventTimeline = '<div class="cd-timeline-block">\
 								</div>\
 							</div>';
 function alertNotLoggedIn(){
-    alert("Creează-ți un cont.");
+    alert("Intră în cont sau creează unul nou pentru a putea accesa toate informațiile.");
 }
 function getEventData(id) {
 	$.ajax({

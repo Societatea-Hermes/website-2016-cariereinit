@@ -357,8 +357,10 @@
                                                  alt="Bionote Andrei KELEMEN">
                                         </div>
                                         <div class="team-desc">
-                                            <div class="team-title"><h4>Dan Mircea Suciu - Lector @ Universitatea Babeș-Bolyai
-                                                </h4></div>
+                                            <div class="team-title">
+                                                <h4>Dan Mircea Suciu - Lector </h4>
+                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>
+                                            </div>
                                             <div class="team-content">
                                                 <p class="textJustify">
                                                     Lector la Facultatea de Matematică și Informatică a Universității Babeș-Bolyai, Cluj Napoca. Cadru didactic asociat la Școala Națională de Studii Politice și Administrative, București.
@@ -381,9 +383,9 @@
                                                  alt="Bionote Andrei KELEMEN">
                                         </div>
                                         <div class="team-desc">
-                                            <div class="team-title"><h4>Simona Motogna - Conferențiar & Prodecan @
-                                                    Universitatea Babeș-Bolyai
-                                                </h4></div>
+                                            <div class="team-title"><h4>Simona Motogna - Conferențiar & Prodecan  </h4>                                             </h4>
+                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>
+                                            </div>
                                             <div class="team-content">
                                                 <p class="textJustify">
                                                     Simona Motogna este conferențiar și prodecan al Facultății de
@@ -409,7 +411,7 @@
                                                  alt="Bionote Andrei KELEMEN">
                                         </div>
                                         <div class="team-desc">
-                                            <div class="team-title"><h4>Paul Chirilă - Fondator @ Around25
+                                            <div class="team-title"><h4>Paul Chirilă - CEO & Fondator  @ Around25
                                                 </h4></div>
                                             <div class="team-content">
                                                 <p class="textJustify">
