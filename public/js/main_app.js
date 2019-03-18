@@ -99,7 +99,59 @@ function getJobOffers(id) {
         success: function (response) {
             var offers = response.rows;
             var toReplace = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">' +
-                '<input type="checkbox"  onclick="acceptGDPR()" id="accept" value="Politici"> Accept prelucrarea datelor personale de catre Societatea Hermes si Firmele Partenere, in vederea unei posibile recrutari.</a><br>' +
+                '<input type="checkbox"  onclick="acceptGDPR()" id="accept" value="Politici"> Accept prelucrarea datelor personale de catre Societatea Hermes si Firmele Partenere, in vederea unei posibile recrutari.<br>' +
+                '<input type="checkbox" onclick="showDetailsGdpr()" id="showGdpr">Vezi mai multe despre prelucrarea datelor cu caracter personal:' +
+                '<div id="detailsGdpr" style="display: none">' +
+                '<b>Acord privind Politica de Confidențialitate</b>' +'<br>'+
+                'Acest formular cuprinde o informare cu privire la datele colectate de la dumneavoastră.' +'<br>'+
+                ' În colectarea acestor date, conform legii, trebuie să vă furnizam informații despre noi,' +'<br>'+
+                ' motivele pentru care colectăm datele și cum le vom utiliza, precum și despre drepturile' +'<br>'+
+                ' pe care le aveți cu privire la datele dumneavoastră cu caracter personal. Prin acest' +'<br>'+
+                ' formular vă solicităm să vă exprimați consimțământul pentru a putea utiliza datele' +'<br>'+
+                ' dumneavoastră cu caracter personal, în scopurile specificate aici. Vă rugăm să completați' +'<br>'+
+                ' acest formular doar dacă sunteți de acord să ne acordați acest consimțământ în vederea' +'<br>'+
+                ' scopurilor specificate aici.' +'<br>'+'<br>'+
+                '<b>Cine suntem?</b>' +
+                '<br>'+
+                'Denumirea societății care vă solicită consimțământul pentru utilizarea datelor dumneavoastră,' +'<br>'+
+                ' în scopurile specificate în acest formular, este:' +'<br>'+
+                'ASOCIAȚIA HERMES' +'<br>'+
+                'str. Bogdan Petriceicu, nr.45, sala H4' +'<br>'+
+                'Cluj-Napoca, judeţul Cluj, România' +'<br>'+
+                '<br>'+
+                '<b>Dorim să utilizăm următoarele date cu caracter personal:</b>' +
+                '<br>' +
+                'Nume și Prenume' +'<br>'+
+                'Adresa de e-mail' +'<br>'+
+                'Curriculum Vitae' +'<br>'+
+                'Utilizarea datelor dumneavoastră' +'<br>'+
+                '<br>'+
+                'Datele dumneavoastră vor fi folosite exclusiv în scopul recrutării în cadrul evenimentului' +'<br>'+
+                '"Cariere in IT". Dându-vă acordul, datele dumneavoastră pot fi transmise altor companii ' +'<br>'+
+                'afiliate sau cu care se află în relații de parteneriat, dar numai în scopurile specificate' +'<br>'+
+                'aici. Puteți oricând să vă retrageți consimțământul pentru utilizarea viitoar e, stocarea,' +'<br>'+
+                'distribuirea sau dezvăluirea datelor dumneavoastră cu caracter personal. Cu toate acestea,' +'<br>'+
+                'vă rugăm să rețineți că retragerea consimțământului dumneavoastră va produce efecte' +'<br>'+
+                'doar pentru procesarea ulterioară a datelor dumneavoastră cu caracter personal și nu' +'<br>'+
+                ' va afecta ' +
+                'legalitatea procesării deja efectuate.' +'<br>'+
+                '<b>Retragerea consimțământului</b>' +'<br>'+
+                '<br>'+
+                'Vă puteți retrage consimțământul oricând la adresa de email: ' +'<br>'+
+                'contact@societatea-hermes.ro.' +'<br>'+
+                '<br>'+
+                '<b>Durata de păstrare a datelor</b>' +
+                '<br>'+'<br>'+
+                'Vom pastră datele dumneavoastră timp de 2 luni de la data furnizării lor către noi.'+'<br>'+
+                '<b>Contact</b>' +'<br>'+
+                '<br>'+
+                'Dacă aveți întrebări, reclamații sau aveți nevoie de informații suplimentare despre ' +'<br>'+
+                'această Politică de Confidențialitate, vă rugăm să ne contactați la adresa de email:' +'<br>'+
+                ' contact@societatea-hermes.ro.'+'<br>'+
+                '</p>' +
+                '</div>' +
+                '<br>'+
+
                 '<div id="gdpr" style="display: none">';
             $('#companyName').html(response.partner);
 
@@ -126,6 +178,19 @@ function acceptGDPR() {
     console.log("intra in functie")
     let x = document.getElementById("gdpr")
     let checkBox = document.getElementById("accept");
+    if (checkBox.checked == true) {
+        console.log("accept");
+        x.style.display = "block";
+    } else {
+        console.log("not accept");
+        x.style.display = "none";
+    }
+}
+
+function showDetailsGdpr() {
+    console.log("intra in functie")
+    let x = document.getElementById("detailsGdpr")
+    let checkBox = document.getElementById("showGdpr");
     if (checkBox.checked == true) {
         console.log("accept");
         x.style.display = "block";
