@@ -72,12 +72,12 @@
                                 <div>About</div>
                             </a></li>
                         {{--							@if($is_logged)--}}
-                        <li><a href="#" data-href="#section-events">
-                                <div>Events</div>
-                            </a></li>
-                        <li><a href="#" data-href="#section-speakers">
-                                <div>Speakers</div>
-                            </a></li>
+{{--                        <li><a href="#" data-href="#section-events">--}}
+{{--                                <div>Events</div>--}}
+{{--                            </a></li>--}}
+{{--                        <li><a href="#" data-href="#section-speakers">--}}
+{{--                                <div>Speakers</div>--}}
+{{--                            </a></li>--}}
                         <li><a href="#" data-href="#section-internships">
                                 <div>Internships &amp; Job offers</div>
                             </a></li>
@@ -112,7 +112,7 @@
     <section id="slider" class="slider-parallax full-screen">
         <div class="slider-parallax-inner">
             <div class="full-screen dark section nopadding nomargin noborder ohidden"
-                 style="background-image: url('/images/Site_Background.png'); background-size: cover; background-position: center center;">
+                 style="background-image: url('/images/landing_2017.png'); background-size: cover; background-position: center center;">
                 <div class="row nomargin" style="position: relative; z-index: 2;">
                     <div class="col-md-offset-7 col-md-5 full-screen" style="background-color: rgba(0,0,0,0.45);">
                         <div class="vertical-middle col-padding">
@@ -173,33 +173,33 @@
             </div>
 
             {{--            @if($is_logged)--}}
-            <div id="section-events" class="page-section nopadding">
+{{--            <div id="section-events" class="page-section nopadding">--}}
+{{----}}
+{{--                <div class="section nomargin">--}}
+{{--                    <div class="container clearfix">--}}
+{{--                        <div class="divcenter center " style="max-width: 900px;">--}}
+{{--                            <h2 class="mb-10 t300 ls1 ">Events</h2>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    --}}{{--columns sign up buttons--}}
+{{--                    <div class="row divcenter center ">--}}
+{{--                        <div class="col-md-4 bottommargin">--}}
+{{--                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1bitviTKSnrSortCqWs3nN1LaYuRZrUOvnP8wGarEnr-ogw/closedform"--}}
+{{--                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop CV</a>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-4 bottommargin">--}}
+{{--                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQ1u_FGzvWyKdbZYJMuT_6D6V85y-ao_tKx0Bi0VikCuQ5EA/closedform"--}}
+{{--                               target="_blank" class="btn btn-success button-circle">Înscriere - Turul--}}
+{{--                                Companiilor</a>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-md-4 bottommargin">--}}
+{{--                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdF2aDZL27lqMKLe0x1MovfPDDY27FtWlcVvO2LFrfWuQ6whg/closedform"--}}
+{{--                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop--}}
+{{--                                Interviu</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                <div class="section nomargin">
-                    <div class="container clearfix">
-                        <div class="divcenter center " style="max-width: 900px;">
-                            <h2 class="mb-10 t300 ls1 ">Events</h2>
-                        </div>
-                    </div>
-                    {{--columns sign up buttons--}}
-                    <div class="row divcenter center ">
-                        <div class="col-md-4 bottommargin">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe1bitviTKSnrSortCqWs3nN1LaYuRZrUOvnP8wGarEnr-ogw/closedform"
-                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop CV</a>
-                        </div>
-                        <div class="col-md-4 bottommargin">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQ1u_FGzvWyKdbZYJMuT_6D6V85y-ao_tKx0Bi0VikCuQ5EA/closedform"
-                               target="_blank" class="btn btn-success button-circle">Înscriere - Turul
-                                Companiilor</a>
-                        </div>
-                        <div class="col-md-4 bottommargin">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdF2aDZL27lqMKLe0x1MovfPDDY27FtWlcVvO2LFrfWuQ6whg/closedform"
-                               target="_blank" class="btn btn-success button-circle">Înscriere - Workshop
-                                Interviu</a>
-                        </div>
-                    </div>
-
-                    {{--</div>--}}
+{{--                    --}}{{--</div>--}}
 
 
                     <div class="common-height clearfix">
@@ -242,194 +242,194 @@
                     </div>
                 </div>
 
-                <div id="section-speakers" class="page-section nopadding">
-                    {{--title speakers--}}
-                    <div class="section nomargin">
-                        <div class="container clearfix">
-                            <div class="divcenter center" style="max-width: 900px;">
-                                <h2 class="nobottommargin t300 ls1">Speakers</h2>
-                            </div>
-                        </div>
-                    </div>
-                    {{--end title speakers--}}
+{{--                <div id="section-speakers" class="page-section nopadding">--}}
+{{--                    --}}{{--title speakers--}}
+{{--                    <div class="section nomargin">--}}
+{{--                        <div class="container clearfix">--}}
+{{--                            <div class="divcenter center" style="max-width: 900px;">--}}
+{{--                                <h2 class="nobottommargin t300 ls1">Speakers</h2>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    --}}{{--end title speakers--}}
 
 
-                    {{--speakers content--}}
-                    <div class="content-wrap">
-                        <div class="container clearfix">
+{{--                    --}}{{--speakers content--}}
+{{--                    <div class="content-wrap">--}}
+{{--                        <div class="container clearfix">--}}
 
-                            {{--rows for each speaker--}}
-                            <div class="row">
-                                <div class="col-md-12 bottommargin">
-                                    <div class="team team-list clearfix">
-                                        <div class="team-image">
-                                            <img src="/images/speakers/Bionote_Andrei_KELEMEN.jpg"
-                                                 alt="Bionote Andrei KELEMEN">
-                                        </div>
-                                        <div class="team-desc">
-                                            <div class="team-title"><h4>Andrei Kelemen - Director Executiv @ Cluj IT
-                                                    Cluster</h4></div>
-                                            <div class="team-content">
-                                                <p class="textJustify">
-                                                    De-a lungul carierei sale profesionale, Andrei a deținut funcții de
-                                                    conducere în diverse organizații private și publice, unde a condus
-                                                    numeroase proiecte în valoare de zeci de milioane de euro. Printre
-                                                    altele, a fost manager de proiect pentru Universitatea Babeș-Bolyai,
-                                                    cea
-                                                    mai mare universitate publică din țară cu care colaborează și în
-                                                    acest
-                                                    moment. Înainte de aceasta, a coordonat compartimentul de
-                                                    managementul
-                                                    informației într-una din agențiile cu atribuții de gestionare a
-                                                    fondurilor structurale UE din cadrul Ministerului Muncii. Din 2013
-                                                    este
-                                                    directorul executiv al Clusterului IT Cluj, prima și cea mai
-                                                    importantă
-                                                    organizație de acest tip din țară, unde supervizează toate aspectele
-                                                    operaționale ale asociației care reprezintă interesele celei mai
-                                                    dinamice industrii din Cluj. Andrei contribuie, de asemenea, la
-                                                    definirea strategiei și a obiectivelor inițiativei privind
-                                                    clusterul,
-                                                    alături de Consiliul Director și Adunarea Generală. Andrei este
-                                                    promotorul unor proiecte de schimbare culturală și organizațională
-                                                    cu
-                                                    impact asupra destinului industriei de IT din Cluj și nu numai. Este
-                                                    licențiat și deține o diplomă de master în administrația publică de
-                                                    la
-                                                    Universitatea Babeș-Bolyai din Cluj-Napoca, România.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--end row for speaker--}}
+{{--                            --}}{{--rows for each speaker--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-12 bottommargin">--}}
+{{--                                    <div class="team team-list clearfix">--}}
+{{--                                        <div class="team-image">--}}
+{{--                                            <img src="/images/speakers/Bionote_Andrei_KELEMEN.jpg"--}}
+{{--                                                 alt="Bionote Andrei KELEMEN">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="team-desc">--}}
+{{--                                            <div class="team-title"><h4>Andrei Kelemen - Director Executiv @ Cluj IT--}}
+{{--                                                    Cluster</h4></div>--}}
+{{--                                            <div class="team-content">--}}
+{{--                                                <p class="textJustify">--}}
+{{--                                                    De-a lungul carierei sale profesionale, Andrei a deținut funcții de--}}
+{{--                                                    conducere în diverse organizații private și publice, unde a condus--}}
+{{--                                                    numeroase proiecte în valoare de zeci de milioane de euro. Printre--}}
+{{--                                                    altele, a fost manager de proiect pentru Universitatea Babeș-Bolyai,--}}
+{{--                                                    cea--}}
+{{--                                                    mai mare universitate publică din țară cu care colaborează și în--}}
+{{--                                                    acest--}}
+{{--                                                    moment. Înainte de aceasta, a coordonat compartimentul de--}}
+{{--                                                    managementul--}}
+{{--                                                    informației într-una din agențiile cu atribuții de gestionare a--}}
+{{--                                                    fondurilor structurale UE din cadrul Ministerului Muncii. Din 2013--}}
+{{--                                                    este--}}
+{{--                                                    directorul executiv al Clusterului IT Cluj, prima și cea mai--}}
+{{--                                                    importantă--}}
+{{--                                                    organizație de acest tip din țară, unde supervizează toate aspectele--}}
+{{--                                                    operaționale ale asociației care reprezintă interesele celei mai--}}
+{{--                                                    dinamice industrii din Cluj. Andrei contribuie, de asemenea, la--}}
+{{--                                                    definirea strategiei și a obiectivelor inițiativei privind--}}
+{{--                                                    clusterul,--}}
+{{--                                                    alături de Consiliul Director și Adunarea Generală. Andrei este--}}
+{{--                                                    promotorul unor proiecte de schimbare culturală și organizațională--}}
+{{--                                                    cu--}}
+{{--                                                    impact asupra destinului industriei de IT din Cluj și nu numai. Este--}}
+{{--                                                    licențiat și deține o diplomă de master în administrația publică de--}}
+{{--                                                    la--}}
+{{--                                                    Universitatea Babeș-Bolyai din Cluj-Napoca, România.--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            --}}{{--end row for speaker--}}
 
-                            {{--rows for each speaker--}}
-                            <div class="row">
-                                <div class="col-md-12 bottommargin">
-                                    <div class="team team-list clearfix">
-                                        <div class="team-image">
-                                            <img src="/images/speakers/Razvan_Voica_2.jpeg"
-                                                 alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">
-                                        </div>
-                                        <div class="team-desc">
-                                            <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala
-                                                    Informală de IT
-                                                </h4></div>
-                                            <div class="team-content">
-                                                <p class="textJustify">
-                                                    Lider demn de încredere, abordând un mod ingenios de conducere, cu o
-                                                    gândire creativă și deschisă, Răzvan are peste 17 ani de experiență
-                                                    în
-                                                    industria IT, din care în mai mult de 10 a ocupat poziții de
-                                                    management
-                                                    și antreprenoriat.
-                                                    După sistemul său de valori, cultura reprezintă principalul factor
-                                                    în
-                                                    întemeierea unei echipe, "cablul" vital, ce ne conectează și creează
-                                                    o
-                                                    coordonare inimaginabilă.
+{{--                            --}}{{--rows for each speaker--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-12 bottommargin">--}}
+{{--                                    <div class="team team-list clearfix">--}}
+{{--                                        <div class="team-image">--}}
+{{--                                            <img src="/images/speakers/Razvan_Voica_2.jpeg"--}}
+{{--                                                 alt="Razvan Voica - Co-founder & CEO – The Informal School of IT">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="team-desc">--}}
+{{--                                            <div class="team-title"><h4>Răzvan Voica - CEO & Co-Fondator @ Școala--}}
+{{--                                                    Informală de IT--}}
+{{--                                                </h4></div>--}}
+{{--                                            <div class="team-content">--}}
+{{--                                                <p class="textJustify">--}}
+{{--                                                    Lider demn de încredere, abordând un mod ingenios de conducere, cu o--}}
+{{--                                                    gândire creativă și deschisă, Răzvan are peste 17 ani de experiență--}}
+{{--                                                    în--}}
+{{--                                                    industria IT, din care în mai mult de 10 a ocupat poziții de--}}
+{{--                                                    management--}}
+{{--                                                    și antreprenoriat.--}}
+{{--                                                    După sistemul său de valori, cultura reprezintă principalul factor--}}
+{{--                                                    în--}}
+{{--                                                    întemeierea unei echipe, "cablul" vital, ce ne conectează și creează--}}
+{{--                                                    o--}}
+{{--                                                    coordonare inimaginabilă.--}}
 
-                                                    Se spune că ar avea un al șaselea simț când vine vorba de descifrarea
-                                                    personalităților și de înțelegerea oamenilor.
+{{--                                                    Se spune că ar avea un al șaselea simț când vine vorba de descifrarea--}}
+{{--                                                    personalităților și de înțelegerea oamenilor.--}}
 
-                                                    Așadar, strategiile sale și abilitatea de a se adapta ușor
-                                                    oportunităților l-au motivat să contribuie la fondarea și
-                                                    dezvoltarea
-                                                    celei mai mari platforme de educație alternativă din România: Școala
-                                                    Informală de IT.
+{{--                                                    Așadar, strategiile sale și abilitatea de a se adapta ușor--}}
+{{--                                                    oportunităților l-au motivat să contribuie la fondarea și--}}
+{{--                                                    dezvoltarea--}}
+{{--                                                    celei mai mari platforme de educație alternativă din România: Școala--}}
+{{--                                                    Informală de IT.--}}
 
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--end row for speaker--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            --}}{{--end row for speaker--}}
 
-                            {{--rows for each speaker--}}
-                            <div class="row">
-                                <div class="col-md-12 bottommargin">
-                                    <div class="team team-list clearfix">
-                                        <div class="team-image">
-                                            <img src="/images/speakers/Dan_Mircea_Suciu.jpg"
-                                                 alt="Bionote Andrei KELEMEN">
-                                        </div>
-                                        <div class="team-desc">
-                                            <div class="team-title">
-                                                <h4>Dan Mircea Suciu - Lector </h4>
-                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>
-                                            </div>
-                                            <div class="team-content">
-                                                <p class="textJustify">
-                                                    Lector la Facultatea de Matematică și Informatică a Universității Babeș-Bolyai, Cluj Napoca. Cadru didactic asociat la Școala Națională de Studii Politice și Administrative, București.
-                                                    Peste 20 de ani de experiență în dezvoltarea de produse software, din care mai bine de jumătate petrecute coordonând echipe internaționale de dimensiuni variate din rolul de leader tehnic, manager de proiect sau Scrum Master.
-                                                    Pasionat de jocuri video și filme de animație.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--end row for speaker--}}
+{{--                            --}}{{--rows for each speaker--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-12 bottommargin">--}}
+{{--                                    <div class="team team-list clearfix">--}}
+{{--                                        <div class="team-image">--}}
+{{--                                            <img src="/images/speakers/Dan_Mircea_Suciu.jpg"--}}
+{{--                                                 alt="Bionote Andrei KELEMEN">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="team-desc">--}}
+{{--                                            <div class="team-title">--}}
+{{--                                                <h4>Dan Mircea Suciu - Lector </h4>--}}
+{{--                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="team-content">--}}
+{{--                                                <p class="textJustify">--}}
+{{--                                                    Lector la Facultatea de Matematică și Informatică a Universității Babeș-Bolyai, Cluj Napoca. Cadru didactic asociat la Școala Națională de Studii Politice și Administrative, București.--}}
+{{--                                                    Peste 20 de ani de experiență în dezvoltarea de produse software, din care mai bine de jumătate petrecute coordonând echipe internaționale de dimensiuni variate din rolul de leader tehnic, manager de proiect sau Scrum Master.--}}
+{{--                                                    Pasionat de jocuri video și filme de animație.--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            --}}{{--end row for speaker--}}
 
-                            {{--rows for each speaker--}}
-                            <div class="row">
-                                <div class="col-md-12 bottommargin">
-                                    <div class="team team-list clearfix">
-                                        <div class="team-image">
-                                            <img src="/images/speakers/simona_motogna.jpg"
-                                                 alt="Bionote Andrei KELEMEN">
-                                        </div>
-                                        <div class="team-desc">
-                                            <div class="team-title"><h4>Simona Motogna - Conferențiar & Prodecan  </h4>                                             </h4>
-                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>
-                                            </div>
-                                            <div class="team-content">
-                                                <p class="textJustify">
-                                                    Simona Motogna este conferențiar și prodecan al Facultății de
-                                                    Matematică și informatică. Este implicată în activitatea de practică
-                                                    a studenților și în alte oportunități prin care studenții să își
-                                                    poată construi o carieră de succes. Pasionată de antreprenoriat,
-                                                    inovare, a obținut rezultate remarcabile în coordonarea studenților
-                                                    spre competiție.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--end row for speaker--}}
+{{--                            --}}{{--rows for each speaker--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-12 bottommargin">--}}
+{{--                                    <div class="team team-list clearfix">--}}
+{{--                                        <div class="team-image">--}}
+{{--                                            <img src="/images/speakers/simona_motogna.jpg"--}}
+{{--                                                 alt="Bionote Andrei KELEMEN">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="team-desc">--}}
+{{--                                            <div class="team-title"><h4>Simona Motogna - Conferențiar & Prodecan  </h4>                                             </h4>--}}
+{{--                                                <h4>@Facultatea de Matematica si Informatica, Universitatea Babes-Bolyai</h4>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="team-content">--}}
+{{--                                                <p class="textJustify">--}}
+{{--                                                    Simona Motogna este conferențiar și prodecan al Facultății de--}}
+{{--                                                    Matematică și informatică. Este implicată în activitatea de practică--}}
+{{--                                                    a studenților și în alte oportunități prin care studenții să își--}}
+{{--                                                    poată construi o carieră de succes. Pasionată de antreprenoriat,--}}
+{{--                                                    inovare, a obținut rezultate remarcabile în coordonarea studenților--}}
+{{--                                                    spre competiție.--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            --}}{{--end row for speaker--}}
 
-                            {{--rows for each speaker--}}
-                            <div class="row">
-                                <div class="col-md-12 bottommargin">
-                                    <div class="team team-list clearfix">
-                                        <div class="team-image">
-                                            <img src="/images/speakers/Paul_Chirila_2.jpg"
-                                                 alt="Bionote Andrei KELEMEN">
-                                        </div>
-                                        <div class="team-desc">
-                                            <div class="team-title"><h4>Paul Chirilă - CEO & Fondator  @ Around25
-                                                </h4></div>
-                                            <div class="team-content">
-                                                <p class="textJustify">
-                                                    Fost developer, actualmente antreprenor, mentor și tătic, Paul jonglează cu toate aceste roluri într-un mod jovial, destins și echilibrat. Aceste calități se reflectă în atmosfera din Around25, companie pe care o dezvoltă cu succes de 12 ani. Și pentru că munca de CEO nu e de ajuns, Paul e activ și în lumea startup-urilor, având în palmares 5 startup-uri: 3 pe piață, 2 eșuate.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{--end row for speaker--}}
+{{--                            --}}{{--rows for each speaker--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-12 bottommargin">--}}
+{{--                                    <div class="team team-list clearfix">--}}
+{{--                                        <div class="team-image">--}}
+{{--                                            <img src="/images/speakers/Paul_Chirila_2.jpg"--}}
+{{--                                                 alt="Bionote Andrei KELEMEN">--}}
+{{--                                        </div>--}}
+{{--                                        <div class="team-desc">--}}
+{{--                                            <div class="team-title"><h4>Paul Chirilă - CEO & Fondator  @ Around25--}}
+{{--                                                </h4></div>--}}
+{{--                                            <div class="team-content">--}}
+{{--                                                <p class="textJustify">--}}
+{{--                                                    Fost developer, actualmente antreprenor, mentor și tătic, Paul jonglează cu toate aceste roluri într-un mod jovial, destins și echilibrat. Aceste calități se reflectă în atmosfera din Around25, companie pe care o dezvoltă cu succes de 12 ani. Și pentru că munca de CEO nu e de ajuns, Paul e activ și în lumea startup-urilor, având în palmares 5 startup-uri: 3 pe piață, 2 eșuate.--}}
+{{--                                                </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            --}}{{--end row for speaker--}}
 
-                        </div>
-                    </div>
-                    {{--end speakers content--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    --}}{{--end speakers content--}}
 
-                </div>
-                {{--end speakers section--}}
+{{--                </div>--}}
+{{--                --}}{{--end speakers section--}}
 
                 {{--begin intership section--}}
                 <div id="section-internships" class="page-section nopadding">
@@ -437,7 +437,7 @@
                         <div class="container clearfix">
                             <div class="divcenter center" style="max-width: 900px;">
                                 <h2 class="nobottommargin t300 ls1">Internships &amp; Job offers</h2>
-
+                                <h4 class ="nobottommargin t300 ls1">To be announced!</h4>
                             </div>
                         </div>
                     </div>
@@ -679,7 +679,7 @@
 
         <div id="copyrights">
             <div class="container center clearfix">
-                Cariere in IT 2019 | All Rights Reserved
+                Cariere in IT 2020 | All Rights Reserved
             </div>
         </div>
 
