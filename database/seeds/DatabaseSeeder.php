@@ -39,7 +39,7 @@ class RootSeeder extends Seeder {
             'password'	=>	Hash::make('oanaoana'),
             'full_name'	=>	'Oana Sabadas',
             'privilege'	=>	3,
-            'email'		=>	'contact@cariereinit.ro'
+            'email'		=>	'oana.sabadas@societatea-hermes.ro'
         ]);
 
     }
