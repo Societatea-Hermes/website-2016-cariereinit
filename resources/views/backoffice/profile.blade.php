@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					Existing logo <br />
-					<img src="/api/getAvatar/{{$id}}" />
+					<img style="max-width: 300px" src="/api/getAvatar/{{$id}}" />
 				</div>
 				<div class="col-md-6">
 					Change logo <br />

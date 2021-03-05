@@ -80,10 +80,10 @@ var offerTemplate = '\
                     </div>\
                     <hr />\
                     <div class="form-group">\
-                            <label for="avatar">Incarca-ti CV-ul</label>\
-                            <input type="file" name="cv" id="cv_{{id}}" class="form-control" required />\
-                        </div>\
-                        <button class="btn btn-success" onclick="uploadCV({{id}})">Aplica</button>\
+                        <label for="avatar">Incarca-ti CV-ul</label>\
+                        <input type="file" name="cv" id="cv_{{id}}" class="form-control" required />\
+                    </div>\
+                    <button class="btn btn-success" onclick="uploadCV({{id}})">Aplica</button>\
                 </div>\
          </div>\
 	</div>';

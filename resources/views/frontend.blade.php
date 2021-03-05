@@ -214,9 +214,9 @@
                                             <div class="col-md-4 col-sm-6 col-padding cursorPointer"
                                                  onclick="getEventData({{$event['id']}})">
                                                 <div class="feature-box fbox-center fbox-dark fbox-plain nobottomborder">
-                                                    {{-- 										<div class="fbox-icon">--}}
-                                                    {{--<a href="#" onclick="getEventData({{$event['id']}})"></a>--}}
-                                                    {{--</div> --}}
+                                                     										<div class="fbox-icon">
+                                                    <a href="#" onclick="getEventData({{$event['id']}})"></a>
+                                                    </div>
                                                     <h3>{{$event['name']}}<br/>
                                                         <small>{{$event['start']}} - {{$event['end']}}</small>
                                                     </h3>
@@ -437,21 +437,29 @@
                         <div class="container clearfix">
                             <div class="divcenter center" style="max-width: 900px;">
                                 <h2 class="nobottommargin t300 ls1">Internships &amp; Job offers</h2>
-                                <h4 class ="nobottommargin t300 ls1">To be announced!</h4>
                             </div>
+                            @if($is_logged)
+                                <div class="divcenter center" style="max-width: 900px;">
+                                    <h4 class="nobottommargin t300 ls1 text-success">Click on company logo to see their offers.</h4>
+                                </div>
+                            @else
+                                <div class="divcenter center" style="max-width: 900px;">
+                                    <h4 class="nobottommargin t300 ls1 text-danger">Please log in to access the job offers.</h4>
+                                </div>
+                            @endif
                         </div>
                     </div>
 
                     <!-- Portfolio Items
                     ============================================= -->
-                    <div id="portfolio"
-                         class="portfolio grid-container portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
-                        @foreach($logos as $logo)
-                            <article class="portfolio-item pf-uielements pf-media wide">
-                                <div class="portfolio-image">
+                    <div class="container">
+                        <div id="portfolio"
+                             class="row common-height clearfix">
+                            @foreach($logos as $logo)
+                                <div class="col-md-4 col-sm-6 col-padding cursorPointer">
                                     @if($is_logged)
                                         <a href="#" onclick="getJobOffers({{$logo['img']}})">
-                                            <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}">
+                                            <img src="{{url('/api/getAvatar/'.$logo['img'])}}" alt="{{$logo['name']}}" style="max-width: 250px">
                                         </a>
                                         <div class="portfolio-overlay cursorPointer"
                                              onclick="getJobOffers({{$logo['img']}})">
@@ -466,9 +474,9 @@
                                     @endif
 
                                 </div>
-                            </article>
-                        @endforeach
-                    </div><!-- #portfolio end -->
+                            @endforeach
+                        </div><!-- #portfolio end -->
+                    </div>
                 </div>
                 {{--@endif--}}
                 {{--end intership section--}}
@@ -706,7 +714,7 @@
                     </section>
                 </div>
                 @if($is_logged)
-                    {{--<button class="btn btn-success" onclick="signup()">Inscrie-te pentru eveniment</button>--}}
+                    <button class="btn btn-success" onclick="signup()">Inscrie-te pentru eveniment</button>
                 @else
                     <p class="lead"> Creează-ți un cont pentru a te putea inscrie la eveniment</p>
                 @endif
