@@ -182,6 +182,7 @@ function getJobOffers(id) {
             var converter = new showdown.Converter();
 
             $.each(offers, function (key, val) {
+                console.log(val);
                 if (specialRequirements.includes(val.cell[3]))
                     toReplace += offerTemplateNoCV
                 else
