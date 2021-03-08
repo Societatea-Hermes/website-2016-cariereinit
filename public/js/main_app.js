@@ -88,6 +88,30 @@ var offerTemplate = '\
          </div>\
 	</div>';
 
+var offerTemplateNoCV = '\
+	<div class="panel panel-default">\
+            <div class="panel-heading" role="tab" id="headingOne">\
+                <h4 class="panel-title">\
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#{{id}}" aria-controls="{{id}}">\
+                        {{title}}\
+                    </a>\
+                </h4>\
+            </div>\
+            <div id="{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">\
+                <div class="panel-body">\
+                    <div class="descriptionInside">\
+                        {{description}}\
+                    </div>\
+                    <hr />\
+                    <div class="form-group">\
+                        <label for="avatar">Aplica direct pe site-ul companiei</label>\
+                    </div>\
+                </div>\
+         </div>\
+	</div>';
+
+var specialRequirements = []
+
 function getJobOffers(id) {
     $.ajax({
         url: '/api/getOffers',
@@ -158,7 +182,11 @@ function getJobOffers(id) {
             var converter = new showdown.Converter();
 
             $.each(offers, function (key, val) {
-                toReplace += offerTemplate;
+                if (specialRequirements.includes(val.cell[3]))
+                    toReplace += offerTemplateNoCV
+                else
+                    toReplace += offerTemplate;
+
                 toReplace = toReplace.replace("{{title}}", val.cell[1]);
                 var description = val.cell[2];
                 var descriptionFinal = converter.makeHtml(description);
