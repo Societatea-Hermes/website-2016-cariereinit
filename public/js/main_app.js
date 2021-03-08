@@ -180,7 +180,7 @@ function getJobOffers(id) {
             $('#companyName').html(response.partner);
 
             var converter = new showdown.Converter();
-
+            console.log(specialRequirements);
             $.each(offers, function (key, val) {
                 console.log(val);
                 if (specialRequirements.includes(val.cell[3]))
