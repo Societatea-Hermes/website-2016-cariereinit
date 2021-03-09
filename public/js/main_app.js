@@ -110,7 +110,7 @@ var offerTemplateNoCV = '\
          </div>\
 	</div>';
 
-var specialRequirements = ["Zenitech", "Accenture"]
+var specialRequirements = ["Zenitech", "Accenture", "Accesa", "MSG"]
 
 function getJobOffers(id) {
     $.ajax({
