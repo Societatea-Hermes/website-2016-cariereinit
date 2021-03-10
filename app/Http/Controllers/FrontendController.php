@@ -35,10 +35,6 @@ class FrontendController extends Controller
     		);
     	};
 
-        $ceva = $logos[3];
-        $logos[3] = $logos[4];
-        $logos[4] = $ceva;
-
         // Events.
     	$events = Event::all();
     	$eventsArr = array();
