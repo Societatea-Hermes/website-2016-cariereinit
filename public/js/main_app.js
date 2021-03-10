@@ -179,6 +179,11 @@ function getJobOffers(id) {
                 '<div id="gdpr" style="display: none">';
             $('#companyName').html(response.partner);
 
+            if (offers.length === 0) {
+                alert("Partenerul nu are nicio oferta postata la noi pe site. Va rugam sa incercati pe site-ul partenerului! ")
+                return;
+            }
+
             var converter = new showdown.Converter();
             console.log(specialRequirements);
             $.each(offers, function (key, val) {
