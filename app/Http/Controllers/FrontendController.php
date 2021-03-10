@@ -33,9 +33,13 @@ class FrontendController extends Controller
     			'name'	=>	$logo->full_name,
     			'url'	=>	$logo->site_url
     		);
-    	}
+    	};
 
-    	// Events.
+        $ceva = $logos[3];
+        $logos[3] = $logos[4];
+        $logos[4] = $ceva;
+
+        // Events.
     	$events = Event::all();
     	$eventsArr = array();
     	foreach ($events as $event) {
