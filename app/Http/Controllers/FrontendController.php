@@ -19,10 +19,10 @@ class FrontendController extends Controller
     		$isLogged = true;
     	}
 
-    	$partnerLogos = User::select('packages.logo_size', 'users.id', 'users.full_name', 'users.site_url')
+    	$partnerLogos = User::select('packages.id', 'packages.logo_size', 'users.id', 'users.full_name', 'users.site_url')
     						->join('packages', 'packages.id', '=', 'users.package_id')
     						->where('users.privilege', 2)
-                            ->orderBy("packages.logo_size")
+                            ->orderByDesc("packages.id")
     						->get();
 
     	$logos = array();
