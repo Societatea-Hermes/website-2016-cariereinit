@@ -22,7 +22,7 @@ class FrontendController extends Controller
     	$partnerLogos = User::select('packages.logo_size', 'users.id', 'users.full_name', 'users.site_url')
     						->join('packages', 'packages.id', '=', 'users.package_id')
     						->where('users.privilege', 2)
-                            ->orderBy("packages.logo_size", "asc")
+                            ->orderByDesc("packages.logo_size")
     						->get();
 
     	$logos = array();
