@@ -117,7 +117,7 @@
                     <div class="col-md-offset-7 col-md-5 full-screen" style="background-color: rgba(0,0,0,0.45);">
                         <div class="vertical-middle col-padding">
                             <div class="heading-block nobottomborder bottommargin-sm">
-                                <h1 style="font-size: 22px;">CariereInIT</h1>
+                                <h1 style="font-size: 22px;">CariereInIT 2023</h1>
                                 <span style="font-size: 16px;"
                                       class="t300 capitalize ls1 notopmargin">{{$is_logged ? "Salut, ".$userData['full_name']."! " : ""}}</span>
                             </div>
@@ -690,7 +690,7 @@
 
         <div id="copyrights">
             <div class="container center clearfix">
-                Cariere in IT 2020 | All Rights Reserved
+                Cariere in IT <?php date('Y') ?> | All Rights Reserved
             </div>
         </div>
 
