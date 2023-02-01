@@ -690,7 +690,7 @@
 
         <div id="copyrights">
             <div class="container center clearfix">
-                Cariere in IT <?php date('Y') ?> | All Rights Reserved
+                Cariere in IT <?php echo date('Y'); ?> | All Rights Reserved
             </div>
         </div>
 
