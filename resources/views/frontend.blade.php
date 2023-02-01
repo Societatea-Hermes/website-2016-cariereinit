@@ -447,7 +447,8 @@
                                 </div>
                             @else
                                 <div class="divcenter center" style="max-width: 900px;">
-                                    <h4 class="nobottommargin t300 ls1 text-danger">Please log in to access the job offers.</h4>
+                                    <!-- <h4 class="nobottommargin t300 ls1 text-danger">Please log in to access the job offers.</h4> -->
+                                    <h4 class="nobottommargin t300 ls1 text-success">Te așteptăm la standuri pentru a discuta cu firmele partenere.</h4>
                                 </div>
                             @endif
                         </div>
@@ -455,7 +456,7 @@
 
                     <!-- Portfolio Items
                     ============================================= -->
-                    <div class="container">
+                    <!-- <div class="container">
                         <div id="portfolio"
                              class="row common-height clearfix">
                             @foreach($logos as $logo)
@@ -478,8 +479,9 @@
 
                                 </div>
                             @endforeach
-                        </div><!-- #portfolio end -->
-                    </div>
+                        </div>
+                    </div> -->
+                    <!-- #portfolio end -->
                 </div>
                 {{--@endif--}}
                 {{--end intership section--}}
@@ -605,7 +607,7 @@
                         </div>
                     @endif
 
-                    <div class="container topmargin-lg clearfix">
+                    <!-- <div class="container topmargin-lg clearfix">
                         <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget"
                              data-margin="80"
                              data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2"
@@ -617,7 +619,7 @@
                                                 alt="{{$logo['name']}}"></a></div>
                             @endforeach
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
