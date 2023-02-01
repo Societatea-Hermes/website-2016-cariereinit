@@ -139,10 +139,11 @@
                                 </div>
                             @endif -->
                             <p class="nobottommargin">
-                                <small class="t300">
+                                <!-- <small class="t300"> -->
                                     <em>Înscrie-te la evenimente <a href="https://www.instagram.com/societatea.hermes/">aici</a> 
                                     sau vezi ce am pregătit <a href="https://www.facebook.com/events/1357225998413664">aici</a>. Te așteptăm alături de noi!
-                                </em></small>
+                                    </em>
+                                <!-- </small> -->
                             </p>
                             <!-- <p class="nobottommargin">
                                 <small class="t300"><em>Dacă Facebook a fost autorizat anterior pe acest site, vei fi
