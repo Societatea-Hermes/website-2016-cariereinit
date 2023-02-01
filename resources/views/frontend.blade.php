@@ -121,7 +121,7 @@
                                 <span style="font-size: 16px;"
                                       class="t300 capitalize ls1 notopmargin">{{$is_logged ? "Salut, ".$userData['full_name']."! " : ""}}</span>
                             </div>
-                            @if(!$is_logged)
+                            <!-- @if(!$is_logged)
                                 <div class="col_full nobottommargin">
                                     <a href="{{url('/api/facebookLogin')}}">
                                         <button class="t400 capitalize button button-border button-light button-circle nomargin">
@@ -137,15 +137,17 @@
                                         </button>
                                     </a>
                                 </div>
-                            @endif
+                            @endif -->
                             <p class="nobottommargin">
-                                <small class="t300"><em>Înscrie-te la evenimente, încarcă-ți CV-ul și dă startul
-                                        carierei tale în IT!</em></small>
+                                <small class="t300">
+                                    <em>Înscrie-te la evenimente <a href="https://www.instagram.com/societatea.hermes/">aici</a> 
+                                    sau vezi ce am pregătit <a href="https://www.facebook.com/events/1357225998413664">aici</a>. Te așteptăm alături de noi!
+                                </em></small>
                             </p>
-                            <p class="nobottommargin">
+                            <!-- <p class="nobottommargin">
                                 <small class="t300"><em>Dacă Facebook a fost autorizat anterior pe acest site, vei fi
                                         logat cu contul respectiv.</em></small>
-                            </p>
+                            </p> -->
                         </div>
                         <a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250"
                            data-offset="65" class="one-page-arrow dark"><i
