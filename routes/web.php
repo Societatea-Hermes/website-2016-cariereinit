@@ -15,18 +15,18 @@
 //     return view('frontend');
 // });
 
-Route::get('/', 'FrontendController@renderFrontend')->name('frontend');
-Route::any('/getOverlay', 'UserController@getOverlay');
+Route::get('/', 'App\Http\Controllers\FrontendController@renderFrontend')->name('frontend');
+// Route::any('/getOverlay', 'App\Http\Controllers\UserController@getOverlay');
 
-Route::middleware('logged_in')->get('/backoffice/login', 'BackofficeController@login')->name('login');
+// Route::middleware('logged_in')->get('/backoffice/login', 'App\Http\Controllers\BackofficeController@login')->name('login');
 
-Route::get('/backoffice', 'BackofficeController@home')->name('home');
-Route::get('/logout', 'BackofficeController@logout')->name('logout');
+// Route::get('/backoffice', 'App\Http\Controllers\BackofficeController@home')->name('home');
+// Route::get('/logout', 'App\Http\Controllers\BackofficeController@logout')->name('logout');
 
-Route::middleware('admin')->get('/backoffice/events', 'BackofficeController@events')->name('events');
-Route::middleware('admin')->get('/backoffice/packages', 'BackofficeController@packages')->name('packages');
-Route::middleware('admin')->get('/backoffice/users', 'BackofficeController@users')->name('users');
+// Route::middleware('admin')->get('/backoffice/events', 'App\Http\Controllers\BackofficeController@events')->name('events');
+// Route::middleware('admin')->get('/backoffice/packages', 'App\Http\Controllers\BackofficeController@packages')->name('packages');
+// Route::middleware('admin')->get('/backoffice/users', 'App\Http\Controllers\BackofficeController@users')->name('users');
 
-Route::middleware('partner')->get('/backoffice/offers', 'BackofficeController@offers')->name('offers');
+// Route::middleware('partner')->get('/backoffice/offers', 'App\Http\Controllers\BackofficeController@offers')->name('offers');
 
-Route::get('/backoffice/profile', 'BackofficeController@profile')->name('profile');
+// Route::get('/backoffice/profile', 'App\Http\Controllers\BackofficeController@profile')->name('profile');

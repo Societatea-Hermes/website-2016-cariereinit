@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 use Illuminate\Http\Request;
 
@@ -13,37 +13,37 @@ use Illuminate\Http\Request;
 |
 */
 
-/* All users */
-Route::post('/login', 'UserController@login');
-Route::any('/facebookLogin', 'UserController@facebookLogin');
-Route::any('/oAuthRedirect', 'UserController@oAuthRedirect');
+// /* All users */
+// Route::post('/login', 'App\Http\Controllers\UserController@login');
+// Route::any('/facebookLogin', 'App\Http\Controllers\UserController@facebookLogin');
+// Route::any('/oAuthRedirect', 'App\Http\Controllers\UserController@oAuthRedirect');
 
 /* Admin Routes */
-Route::post('/addEditPackage', 'PackageController@addEditPackage');
-Route::get('/getPackages', 'PackageController@getPackages');
-Route::get('/getPackageById', 'PackageController@getPackageById');
+// Route::post('/addEditPackage', 'App\Http\Controllers\PackageController@addEditPackage');
+// Route::get('/getPackages', 'App\Http\Controllers\PackageController@getPackages');
+// Route::get('/getPackageById', 'App\Http\Controllers\PackageController@getPackageById');
 
-Route::post('/addPartnerAccount', 'UserController@addPartnerAccount');
-Route::any('/getAvatar/{id}', 'UserController@getAvatar');
-Route::post('/changeAvatar', 'UserController@changeAvatar');
-Route::post('/changePassword', 'UserController@changePassword');
-Route::post('/resetPartnerPassword', 'UserController@resetPartnerPassword');
-Route::get('/getUsers', 'UserController@getUsers');
+// Route::post('/addPartnerAccount', 'App\Http\Controllers\UserController@addPartnerAccount');
+// Route::any('/getAvatar/{id}', 'App\Http\Controllers\UserController@getAvatar');
+// Route::post('/changeAvatar', 'App\Http\Controllers\UserController@changeAvatar');
+// Route::post('/changePassword', 'App\Http\Controllers\UserController@changePassword');
+// Route::post('/resetPartnerPassword', 'App\Http\Controllers\UserController@resetPartnerPassword');
+// Route::get('/getUsers', 'App\Http\Controllers\UserController@getUsers');
 
-Route::post('/addEditEvent', 'EventController@addEditEvent');
-Route::get('/getEvents', 'EventController@getEvents');
-Route::get('/getEventById', 'EventController@getEventById');
-Route::get('/getEventRegistrations', 'EventController@getEventRegistrations');
-Route::post('/registerForEvent', 'EventController@registerForEvent');
-Route::post('/addEditEventTimeline', 'EventController@addEditEventTimeline');
-Route::get('/getEventTimelineById', 'EventController@getEventTimelineById');
-Route::post('/deleteEventTimeline', 'EventController@deleteEventTimeline');
-Route::get('/getEventTimelines', 'EventController@getEventTimelines');
+// Route::post('/addEditEvent', 'App\Http\Controllers\EventController@addEditEvent');
+// Route::get('/getEvents', 'App\Http\Controllers\EventController@getEvents');
+// Route::get('/getEventById', 'App\Http\Controllers\EventController@getEventById');
+// Route::get('/getEventRegistrations', 'App\Http\Controllers\EventController@getEventRegistrations');
+// Route::post('/registerForEvent', 'App\Http\Controllers\EventController@registerForEvent');
+// Route::post('/addEditEventTimeline', 'App\Http\Controllers\EventController@addEditEventTimeline');
+// Route::get('/getEventTimelineById', 'App\Http\Controllers\EventController@getEventTimelineById');
+// Route::post('/deleteEventTimeline', 'App\Http\Controllers\EventController@deleteEventTimeline');
+// Route::get('/getEventTimelines', 'App\Http\Controllers\EventController@getEventTimelines');
 
 
-Route::post('/addEditOffer', 'OfferController@addEditOffer');
-Route::get('/getOffers', 'OfferController@getOffers');
-Route::get('/getOfferById', 'OfferController@getOfferById');
-Route::get('/getOfferApplications', 'OfferController@getOfferApplications');
-Route::post('/applyForOffer', 'OfferController@applyForOffer');
-Route::get('/downloadApplication/{id_application}', 'OfferController@downloadApplication');
+// Route::post('/addEditOffer', 'App\Http\Controllers\OfferController@addEditOffer');
+// Route::get('/getOffers', 'App\Http\Controllers\OfferController@getOffers');
+// Route::get('/getOfferById', 'App\Http\Controllers\OfferController@getOfferById');
+// Route::get('/getOfferApplications', 'App\Http\Controllers\OfferController@getOfferApplications');
+// Route::post('/applyForOffer', 'App\Http\Controllers\OfferController@applyForOffer');
+// Route::get('/downloadApplication/{id_application}', 'App\Http\Controllers\OfferController@downloadApplication'); -->

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Str;
+
 
 /* Requests */
 use App\Http\Requests\AddPartnerAccountRequest;
@@ -23,17 +25,15 @@ use App\Models\User;
 use File;
 use Hash;
 use Image;
-use Input;
 use Response;
 use Session;
 use Socialite;
-use Uuid;
 
 class UserController extends Controller
 {
     public function login(Auth $auth, User $user, LoginRequest $req) {
-    	$username = Input::get('username');
-    	$password = Input::get('password');
+    	$username = $req->input('username');
+    	$password = $req->input('password');
 
     	$auth->ip = $req->ip();
     	$auth->user_agent = $req->header('User-Agent');
@@ -53,7 +53,7 @@ class UserController extends Controller
 	    	$userExists = $user->where('username', $username)->whereNotNull('password')->firstOrFail();
     	} catch(ModelNotFoundException $ex) {
     		$auth->save();
-    		return $this->returnResponseJson($toReturn);
+    		return response()->json($toReturn);
     	}
 
     	// We found a user..
@@ -62,12 +62,11 @@ class UserController extends Controller
     	// Invalid password
     	if(!Hash::check($password, $userExists->password)) {
     		$auth->save();
-    		return $this->returnResponseJson($toReturn);
+    		return response()->json($toReturn);
     	}
 
     	// all good..
-    	$loginKey = Uuid::generate(1);
-    	$loginKey = $loginKey->string;
+    	$loginKey = Str::uuid()->toString();
 
     	$auth->token_generated = $loginKey;
     	$auth->save();
@@ -83,22 +82,22 @@ class UserController extends Controller
 			'message'	=>	$loginKey
 		);
 
-		return $this->returnResponseJson($toReturn);
+		return response()->json($toReturn);
     }
 
     public function addPartnerAccount(AddPartnerAccountRequest $req, User $user, Package $pkg) {
         $toReturn = array();
 
-        $user->username = Input::get('username');
-        $password = Input::get('password');
+        $user->username = $req->input('username');
+        $password = $req->input('password');
 
         $user->password = Hash::make($password);
-        $user->full_name = Input::get('full_name');
+        $user->full_name = $req->input('full_name');
         $user->privilege = 2;
-        $user->email = Input::get('email');
-        $user->site_url = Input::get('site_url');
+        $user->email = $req->input('email');
+        $user->site_url = $req->input('site_url');
 
-        $user->package_id = Input::get('package_id');
+        $user->package_id = $req->input('package_id');
 
         // Saving img..
         $allowedExt = array(
@@ -119,7 +118,7 @@ class UserController extends Controller
             // continue; // Not allowed extension detected..
             $toReturn['success'] = 0;
             $toReturn['message'] = "File extension not allowed!";
-            return $this->returnResponseJson($toReturn);
+            return response()->json($toReturn);
         }
         $user->save();
 
@@ -129,7 +128,7 @@ class UserController extends Controller
         $user->save();
 
         $toReturn['success'] = 1;
-        return $this->returnResponseJson($toReturn);
+        return response()->json($toReturn);
     }
 
     public function getAvatar(User $user, $id) {
@@ -162,7 +161,7 @@ class UserController extends Controller
             // continue; // Not allowed extension detected..
             $toReturn['success'] = 0;
             $toReturn['message'] = "File extension not allowed!";
-            return $this->returnResponseJson($toReturn);
+            return response()->json($toReturn);
         }
 
         // deleting old logo..
@@ -174,11 +173,11 @@ class UserController extends Controller
         $user->save();
 
         $toReturn['success'] = 1;
-        return $this->returnResponseJson($toReturn);
+        return response()->json($toReturn);
     }
 
     public function changePassword(ChangePasswordRequest $req, User $user) {
-        $password = Input::get('password');
+        $password = $req->input('password');
 
         $userData = $req->userData;
 
@@ -187,30 +186,30 @@ class UserController extends Controller
         $user->save();
 
         $toReturn['success'] = 1;
-        return $this->returnResponseJson($toReturn);
+        return response()->json($toReturn);
     }
 
     public function resetPartnerPassword(AdminRequest $req, User $user) {
-        $partner_id = Input::get('partner_id');
+        $partner_id = $req->input('partner_id');
 
         $user = $user->findOrFail($partner_id);
         
-        $password = Input::get('password');
+        $password = $req->input('password');
         
         $user->password = Hash::make($password);
         $user->save();
 
         $toReturn['success'] = 1;
-        return $this->returnResponseJson($toReturn);
+        return response()->json($toReturn);
     }
 
     public function getUsers(AdminRequest $req, User $user) {
         $search = array(
-            'privilege'     =>  Input::get('privilege'),
-            'sidx'          =>  Input::get('sidx'),
-            'sord'          =>  Input::get('sord'),
-            'limit'         =>  empty(Input::get('rows')) ? 10 : Input::get('rows'),
-            'page'          =>  empty(Input::get('page')) ? 1 : Input::get('page')
+            'privilege'     =>  $req->input('privilege'),
+            'sidx'          =>  $req->input('sidx'),
+            'sord'          =>  $req->input('sord'),
+            'limit'         =>  empty($req->input('rows')) ? 10 : $req->input('rows'),
+            'page'          =>  empty($req->input('page')) ? 1 : $req->input('page')
         );
 
         $users = $user->getFiltered($search);
@@ -233,7 +232,7 @@ class UserController extends Controller
             'total'     =>  $numPages
         );
 
-        $isGrid = Input::get('is_grid', false); // Checking if the caller is jqGrid -> if yes, we add actions to the response..
+        $isGrid = $req->input('is_grid', false); // Checking if the caller is jqGrid -> if yes, we add actions to the response..
 
         foreach($users as $userX) {
             $actions = $userX->id;
@@ -259,7 +258,7 @@ class UserController extends Controller
             );
         }
 
-        return $this->returnResponseJson($toReturn);
+        return response()->json($toReturn);
     }
 
     public function facebookLogin() {
@@ -286,8 +285,7 @@ class UserController extends Controller
 
         $auth->user_id = $user->id;
 
-        $loginKey = Uuid::generate(1);
-        $loginKey = $loginKey->string;
+        $loginKey = Str::uuid()->toString();
 
         $auth->o_auth_token = $fbUser->token;
         $auth->o_auth_refresh_token = $fbUser->refreshToken;
@@ -319,7 +317,7 @@ class UserController extends Controller
         $auth = $auth->where('token_generated', $userData['token'])->first();
         $fbUser = Socialite::driver('facebook')->userFromToken($auth->o_auth_token);
 
-        $imgName = Uuid::generate('4');
+        $imgName = Str::uuid()->toString();
 
         $fbAvatar = $fbUser->avatar_original;
         $fbAvatar = explode('?', $fbAvatar);
