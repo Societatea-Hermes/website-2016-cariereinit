@@ -71,9 +71,9 @@
                         <li><a href="#" data-href="#section-about">
                                 <div>About</div>
                             </a></li>
-                        <!-- <li><a href="#" data-href="#section-events">
-                                <div>Events</div>
-                            </a></li> -->
+                        <li><a href="#" data-href="#section-events">
+                                <div>Timeline</div>
+                            </a></li>
                         <!-- <li><a href="#" data-href="#section-internships">
                                 <div>Internships &amp; Job offers</div>
                             </a></li> -->
@@ -109,7 +109,7 @@
                                 <h1 style="font-size: 22px;">CariereInIT 2024</h1>
                             </div>
                             <p class="nobottommargin">
-                                <em> <a href="https://www.instagram.com/p/C2NgwG8NM2l/">Hold on, we're still cooking 🧑‍🍳👩‍🍳.</a>
+                                <em> <a href="https://www.facebook.com/events/252430551134028">👀Come see what we prepared for you🍳</a>
                                 </em>
                             </p>
                         </div>
@@ -139,7 +139,7 @@
             </div>
 
 
-                    <div id="section-soon" class="page-section nopadding">
+                    <!-- <div id="section-soon" class="page-section nopadding">
 
                 <div class="section nomargin">
                     <div class="container clearfix">
@@ -148,18 +148,19 @@
                         </div>
                     </div>
 </div>
-</div>
+</div> -->
 
-            <!-- <div id="section-events" class="page-section nopadding">
+            <div id="section-events" class="page-section nopadding">
 
                 <div class="section nomargin">
                     <div class="container clearfix">
                         <div class="divcenter center " style="max-width: 900px;">
-                            <h2 class="mb-10 t300 ls1 ">Events</h2>
+                            <h2 class="mb-10 t300 ls1 ">Timeline</h2>
+                            <img src="/images/timeline.jpg">
                         </div>
                     </div>
 </div>
-</div> -->
+</div>
 
                 <!-- <div id="section-feedback" class="page-section nopadding">
                         <h2 class="center uppercase t300 ls3">Feedback</h2>
@@ -173,7 +174,19 @@
 						</div>
                         <div class="container clearfix">
                             <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget" data-margin="50" data-loop="true" data-nav="false" data-autoplay="4000" data-pagi="false" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5">
-								<div class="oc-item" style="margin-top: 50px"><a href="societatea-hermes.ro" target="_blank"><img src="/images/logo.png" alt="Societatea Hermes"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.msg-systems.ro/" target="_blank"><img src="/images/sponsors/msg.svg" alt=".msg"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.arobsgrup.ro/" target="_blank"><img src="/images/sponsors/arobs.png" alt="AROBS"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.automatify.ro/" target="_blank"><img src="/images/sponsors/automatify.png" alt="Automatify"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.flowtraders.com/" target="_blank"><img src="/images/sponsors/flowtraders.svg" alt="Flow Traders"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://heits.digital/" target="_blank"><img src="/images/sponsors/heits.png" alt="HEITS.digital"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.qubiz.com/" target="_blank"><img src="/images/sponsors/qubiz.png" alt="Qubiz"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://wayfare.ro/" target="_blank"><img src="/images/sponsors/wayfare.png" alt="Wayfare"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://tss-yonder.com/" target="_blank"><img src="/images/sponsors/yonder.svg" alt="Yonder"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://ccscluj.ro/" target="_blank"><img src="/images/sponsors/ccs.png" alt="Casa de Cultura a Studentilor"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.cs.ubbcluj.ro/" target="_blank"><img src="/images/sponsors/fmi.png" alt="Facultatea de Matematica si Informatica"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.ubbcluj.ro/" target="_blank"><img src="/images/sponsors/ubb.svg" alt="Universitatea Babes Bolyai"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://cluj.iuliusmall.com/" target="_blank"><img src="/images/sponsors/iulius.jpg" alt="Iulius Mall"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.yardi.com/" target="_blank"><img src="/images/sponsors/yardi.svg" alt="Yardi"></a></div>
                             </div> 
                         </div> 
 					</div>
@@ -202,9 +215,9 @@
                                        data-offset="70">Top</a></li>
                                 <li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo"
                                        data-speed="1250" data-offset="70">About</a></li>
-                                <!-- <li><a href="#" data-scrollto="#section-events" data-easing="easeInOutExpo"
-                                       data-speed="1250" data-offset="70">Events</a></li>
-                                <li><a href="#" data-scrollto="#section-internships" data-easing="easeInOutExpo"
+                                <li><a href="#" data-scrollto="#section-events" data-easing="easeInOutExpo"
+                                       data-speed="1250" data-offset="70">Timeline</a></li>
+                                <!-- <li><a href="#" data-scrollto="#section-internships" data-easing="easeInOutExpo"
                                        data-speed="1250" data-offset="70">Internships &amp; Job offers</a></li> -->
                                 <!-- <li><a href="#" data-scrollto="#section-feedback" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Feedback</a></li> -->
                                 <li><a href="#" data-scrollto="#section-partners" data-easing="easeInOutExpo" data-speed="1250"
