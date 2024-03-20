@@ -109,7 +109,7 @@
                                 <h1 style="font-size: 22px;">CariereInIT 2024</h1>
                             </div>
                             <p class="nobottommargin">
-                                <em> <a href="https://www.facebook.com/events/252430551134028">👀Come see what we prepared for you🍳</a>
+                                <em> We're done for now, see you next year👋.
                                 </em>
                             </p>
                         </div>
