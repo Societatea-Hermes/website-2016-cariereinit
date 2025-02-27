@@ -101,15 +101,15 @@
     <section id="slider" class="slider-parallax full-screen">
         <div class="slider-parallax-inner">
             <div class="full-screen dark section nopadding nomargin noborder ohidden"
-                style="background-image: url('/images/landing_2024.png'); background-size: cover; background-position: center center;">
+                style="background-image: url('/images/landing_2025.png'); background-size: cover; background-position: center center;">
                 <div class="row nomargin" style="position: relative; z-index: 2;">
                     <div class="col-md-offset-7 col-md-5 full-screen" style="background-color: rgba(0,0,0,0.45);">
                         <div class="vertical-middle col-padding">
                             <div class="heading-block nobottomborder bottommargin-sm">
-                                <h1 style="font-size: 22px;">CariereInIT 2024</h1>
+                                <h1 style="font-size: 22px;">CariereInIT 2025</h1>
                             </div>
                             <p class="nobottommargin">
-                                <em> We're done for now, see you next year👋.
+                                <em> Check out our event 👇.
                                 </em>
                             </p>
                         </div>
@@ -156,7 +156,7 @@
                     <div class="container clearfix">
                         <div class="divcenter center " style="max-width: 900px;">
                             <h2 class="mb-10 t300 ls1 ">Timeline</h2>
-                            <img src="/images/timeline.jpg">
+                            <img src="/images/timeline_2025.jpg">
                         </div>
                     </div>
 </div>
@@ -174,19 +174,16 @@
 						</div>
                         <div class="container clearfix">
                             <div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget" data-margin="50" data-loop="true" data-nav="false" data-autoplay="4000" data-pagi="false" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5">
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.msg-systems.ro/" target="_blank"><img src="/images/sponsors/msg.svg" alt=".msg"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.arobsgrup.ro/" target="_blank"><img src="/images/sponsors/arobs.png" alt="AROBS"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://www.automatify.ro/" target="_blank"><img src="/images/sponsors/automatify.png" alt="Automatify"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.flowtraders.com/" target="_blank"><img src="/images/sponsors/flowtraders.svg" alt="Flow Traders"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://heits.digital/" target="_blank"><img src="/images/sponsors/heits.png" alt="HEITS.digital"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.qubiz.com/" target="_blank"><img src="/images/sponsors/qubiz.png" alt="Qubiz"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://wayfare.ro/" target="_blank"><img src="/images/sponsors/wayfare.png" alt="Wayfare"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://tss-yonder.com/" target="_blank"><img src="/images/sponsors/yonder.svg" alt="Yonder"></a></div>
-                                <div class="oc-item" style="margin-top: 50px"><a href="https://ccscluj.ro/" target="_blank"><img src="/images/sponsors/ccs.png" alt="Casa de Cultura a Studentilor"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://www.cs.ubbcluj.ro/" target="_blank"><img src="/images/sponsors/fmi.png" alt="Facultatea de Matematica si Informatica"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://www.ubbcluj.ro/" target="_blank"><img src="/images/sponsors/ubb.svg" alt="Universitatea Babes Bolyai"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://cluj.iuliusmall.com/" target="_blank"><img src="/images/sponsors/iulius.jpg" alt="Iulius Mall"></a></div>
                                 <div class="oc-item" style="margin-top: 50px"><a href="https://www.yardi.com/" target="_blank"><img src="/images/sponsors/yardi.svg" alt="Yardi"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://tineretclujnapoca.ro/" target="_blank"><img src="/images/sponsors/centru-tineret.svg" alt="Centrul pentru tineret"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.betfairromania.ro/" target="_blank"><img src="/images/sponsors/betfair.svg" alt="Betfair"></a></div>
+                                <div class="oc-item" style="margin-top: 50px"><a href="https://www.lseg.com/en" target="_blank"><img src="/images/sponsors/LSEG.png" alt="LSEG"></a></div>
+                                
                             </div> 
                         </div> 
 					</div>
